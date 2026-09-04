@@ -1,0 +1,23 @@
+# Reference: SigRank Ecosystem Standard
+# Points outward — the (future) SigRank Ecosystem Standard does not yet
+# exist. This file records the planned reference and its relationship to
+# this standard.
+
+id: sigrank-ecosystem-standard
+name: SigRank Ecosystem Standard
+type: standard
+role: public_projection
+authority_class: public_projection
+url: not yet created
+status: planned, not yet created
+description: >-
+  The canonical public explanation of the SigRank family within MO§ES.
+  The SigRank ecosystem is one family within the broader MO§ES ecosystem.
+  When created, the SigRank Ecosystem Standard should reference the MO§ES
+  Ecosystem Standard as its broader ecosystem context.
+
+relationship_to_this_standard: >-
+  SigRank is one family within the broader MO§ES ecosystem. The MO§ES
+  Ecosystem Standard covers the whole ecosystem; the SigRank Ecosystem
+  Standard (when created) will cover the SigRank family specifically and
+  should reference this standard as its parent ecosystem context.

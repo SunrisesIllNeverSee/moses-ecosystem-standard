@@ -1,0 +1,109 @@
+---
+# MO§ES Ecosystem Standard — Authority Assignments
+#
+# Projected from Search Authority master canon and owner directives.
+# This is a public projection — the authoritative source is Search Authority.
+#
+# Maps each entity/repo to its authority class and owner. This standard does
+# not independently invent canonical truth; every assignment traces to Search
+# Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+
+authority_assignments:
+  - entity_id: search_authority
+    authority_class: master_canon
+    authority_owner: deric_j_mchenry
+    roles:
+      - canonical truth adjudication
+      - entity registry
+      - relationship registry
+      - terminology governance
+      - source provenance
+    source_refs: [owner-entity-graph-2026-08-14]
+
+  - entity_id: moses
+    authority_class: canonical_source
+    authority_owner: deric_j_mchenry
+    roles:
+      - governance framework identity
+      - enforcement architecture definition
+    source_refs: [moses-site-data, owner-entity-graph-2026-08-14]
+
+  - entity_id: moses_framework
+    authority_class: canonical_source
+    authority_owner: deric_j_mchenry
+    roles:
+      - formal framework references
+      - claim IDs
+      - ontology concepts
+      - framework version
+    source_refs: [moses-site-data]
+
+  - entity_id: tteop
+    authority_class: protocol_specification
+    authority_owner: deric_j_mchenry
+    roles:
+      - sole interoperability protocol authority
+      - telemetry schema definitions
+      - metric formulas
+      - privacy and provenance semantics
+      - conformance tests
+    source_refs: [tteop-spec-readme, tteop-authority-architecture-directive-2026-09-02]
+
+  - entity_id: sigrank
+    authority_class: product_implementation
+    authority_owner: ello_cello_llc
+    roles:
+      - public leaderboard / proof surface
+      - AI operator evaluation
+      - implements TTEOP via version-pinned profile
+    source_refs: [sigrank-readme, upsilon-architecture-directive-2026-08-28]
+
+  - entity_id: signalaf
+    authority_class: product_implementation
+    authority_owner: ello_cello_llc
+    roles:
+      - public brand and distribution surface
+      - distributes SigRank and Upsilon content
+      - implements TTEOP via version-pinned profile
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - entity_id: upsilon
+    authority_class: product_implementation
+    authority_owner: ello_cello_llc
+    roles:
+      - commercial measurement engine
+      - produces diagnostic measures
+      - implements TTEOP via version-pinned profile
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - entity_id: tteop_mcp
+    authority_class: transport
+    authority_owner: deric_j_mchenry
+    roles:
+      - MCP transport for TTEOP
+      - transport does not define protocol semantics
+    source_refs: [tteop-authority-architecture-directive-2026-09-02]
+
+  - entity_id: sigrank_standard
+    authority_class: legacy_compatibility_source
+    authority_owner: deric_j_mchenry
+    roles:
+      - legacy predecessor of TTEOP
+      - backward compatibility (sigrank/0.1-draft alias)
+      - migration evidence
+    source_refs: [tteop-spec-readme, tteop-authority-architecture-directive-2026-09-02]
+
+  - entity_id: moses_ecosystem_standard
+    authority_class: public_projection
+    authority_owner: deric_j_mchenry
+    roles:
+      - public canonical overview
+      - governed projection of Search Authority
+      - does not independently invent canonical truth
+    source_refs: [owner-entity-graph-2026-08-14]

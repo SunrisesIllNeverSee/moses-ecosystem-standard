@@ -1,0 +1,43 @@
+# Reference: MO§ES Framework
+# Points outward — the authoritative definition of the MO§ES Framework
+# lives at the URL below. This file does NOT copy content from the
+# framework; it records where the framework lives and what it supplies.
+
+id: moses-framework
+name: MO§ES Framework
+type: framework
+role: canonical_source
+authority_class: canonical_source
+url: https://github.com/SunrisesIllNeverSee/moses-framework
+version: v0.1
+status: proposal pending owner freeze
+patent: 63/877,177
+description: >-
+  The canonical source code for the MO§ES intellectual system. A
+  machine-readable ontology, provenance ledger, claims registry, and
+  prior-art map. The MO§ES Framework owns the formal ontology, methodology,
+  claims, laws, epistemic states, and framework structure. This standard
+  references the framework; it does not redefine or re-interpret it.
+
+what_it_supplies:
+  - formal framework references
+  - claim IDs
+  - ontology concepts
+  - framework version
+  - formal status
+
+directory_structure:
+  - intellectual-provenance
+  - ontology
+  - commitment-theory
+  - intelligence
+  - intelligence-provenance
+  - measurement
+  - prior-art
+  - claims
+  - enterprise
+
+boundary_statement: >-
+  Commitment Theory as defined within MO§ES is distinct from other
+  commitment theories. The MO§ES Framework owns the formal definition;
+  this standard references it but does not redefine it.

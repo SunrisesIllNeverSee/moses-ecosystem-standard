@@ -1,0 +1,187 @@
+---
+# MO§ES Ecosystem Standard — Relationship Graph
+#
+# Projected from Search Authority canon/shared/relationships.yaml.
+# This is a public projection — the authoritative source is Search Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+
+relationships:
+  - id: deric_affiliated_with_ello_cello
+    subject: deric_j_mchenry
+    predicate: affiliated_with
+    object: ello_cello_llc
+    status: owner_approved
+    source_refs: [ct-readme, moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: deric_associated_with_moses
+    subject: deric_j_mchenry
+    predicate: associated_with
+    object: moses
+    status: owner_approved
+    source_refs: [moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: ello_cello_associated_with_moses
+    subject: ello_cello_llc
+    predicate: associated_with
+    object: moses
+    status: owner_approved
+    source_refs: [moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: deric_authored_commitment_theory
+    subject: deric_j_mchenry
+    predicate: authored
+    object: commitment_theory
+    status: owner_approved
+    source_refs: [ct-readme, ct-p000, owner-entity-graph-2026-08-14]
+
+  - id: commitment_theory_related_to_conservation_law
+    subject: commitment_theory
+    predicate: contains_law
+    object: conservation_law_of_commitment
+    status: owner_approved
+    source_refs: [ct-p000, ct-readme, owner-entity-graph-2026-08-14]
+
+  - id: moses_related_to_commitment_theory
+    subject: moses
+    predicate: enforcement_architecture_for
+    object: commitment_theory
+    status: owner_approved
+    source_refs: [ct-p000, moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: moses_related_to_conservation_law
+    subject: moses
+    predicate: operationalizes
+    object: conservation_law_of_commitment
+    status: owner_approved
+    source_refs: [ct-paper0, ct-p000, owner-entity-graph-2026-08-14]
+
+  - id: conservation_law_related_to_sigrank
+    subject: conservation_law_of_commitment
+    predicate: foundation_for
+    object: sigrank
+    status: owner_approved
+    source_refs: [sigrank-llms, owner-entity-graph-2026-08-14]
+
+  - id: sigrank_produces_index
+    subject: sigrank
+    predicate: produces
+    object: sigrank_index
+    status: owner_approved
+    source_refs: [sigrank-llms, owner-entity-graph-2026-08-14]
+
+  - id: moses_related_to_signomy
+    subject: moses
+    predicate: governs
+    object: signomy
+    status: owner_approved
+    source_refs: [signomy-site, owner-entity-graph-2026-08-14]
+
+  - id: moses_related_to_civitae
+    subject: moses
+    predicate: governs
+    object: civitae
+    status: owner_approved
+    source_refs: [signomy-site, owner-entity-graph-2026-08-14]
+
+  - id: moses_related_to_kassa
+    subject: kassa
+    predicate: demonstrates_principles_of
+    object: moses
+    status: owner_approved
+    source_refs: [kassa-readme, owner-entity-graph-2026-08-14]
+
+  - id: ello_cello_owns_upsilon
+    subject: ello_cello_llc
+    predicate: owns
+    object: upsilon
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: ello_cello_owns_sigrank
+    subject: ello_cello_llc
+    predicate: owns
+    object: sigrank
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: ello_cello_owns_signalaf
+    subject: ello_cello_llc
+    predicate: owns
+    object: signalaf
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: upsilon_governed_by_moses
+    subject: upsilon
+    predicate: governed_by
+    object: moses
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: upsilon_includes_metric_yield
+    subject: upsilon
+    predicate: includes_metric
+    object: yield_metric
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - id: sigrank_receives_from_upsilon
+    subject: sigrank
+    predicate: receives_results_from
+    object: upsilon
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: sigrank_governed_by_moses
+    subject: sigrank
+    predicate: methodologically_backed_by
+    object: moses
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: signalaf_distributes_sigrank
+    subject: signalaf
+    predicate: distributes
+    object: sigrank
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - id: signalaf_distributes_upsilon_content
+    subject: signalaf
+    predicate: distributes
+    object: upsilon
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: tteop_supersedes_sigrank_standard
+    subject: tteop
+    predicate: supersedes
+    object: sigrank
+    status: owner_approved
+    source_refs: [tteop-authority-architecture-directive-2026-09-02, tteop-spec-readme]
+
+  - id: tteop_implemented_by_sigrank
+    subject: sigrank
+    predicate: implements_protocol
+    object: tteop
+    status: owner_approved
+    source_refs: [tteop-authority-architecture-directive-2026-09-02]
+
+  - id: tteop_implemented_by_signalaf
+    subject: signalaf
+    predicate: implements_protocol
+    object: tteop
+    status: owner_approved
+    source_refs: [tteop-authority-architecture-directive-2026-09-02]
+
+  - id: tteop_implemented_by_upsilon
+    subject: upsilon
+    predicate: implements_protocol
+    object: tteop
+    status: owner_approved
+    source_refs: [tteop-authority-architecture-directive-2026-09-02]

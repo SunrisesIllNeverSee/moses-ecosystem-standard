@@ -1,0 +1,45 @@
+# Reference: TTEOP
+# Points outward — the authoritative definition of TTEOP lives at the
+# URL below. This file does NOT copy content from the protocol
+# specification; it records where the protocol lives and what it supplies.
+
+id: tteop
+name: TTEOP
+aliases:
+  - otep-spec
+  - tteop-spec
+  - Token Telemetry Evaluation Operator Protocol
+type: protocol
+role: authority
+authority_class: protocol_specification
+protocol_version: tteop/0.1-draft
+legacy_alias: sigrank/0.1-draft
+url: https://github.com/SunrisesIllNeverSee/otep-spec
+npm: tteop-spec
+version_doi: 10.5281/zenodo.22180349
+concept_doi: 10.5281/zenodo.22180348
+description: >-
+  An open vendor-neutral interoperability protocol for measuring AI operator
+  token efficiency. TTEOP defines four telemetry primitives (I/O/W/R), five
+  derived metrics, a telemetry envelope schema, privacy modes, provenance
+  levels, and conformance tests. TTEOP is independently authoritative for
+  its protocol semantics — this standard references it but does not
+  redefine it.
+
+what_it_supplies:
+  - protocol identity
+  - protocol version
+  - protocol role
+  - canonical protocol URL
+
+authority_chain:
+  - TTEOP
+  - tteop-spec
+  - "@sigrank/cascade"
+  - sigrank-mcp
+
+product_boundaries:
+  - "TTEOP is the SOLE protocol authority for token telemetry measurement."
+  - "Products implement TTEOP through version-pinned profiles; they do not redefine it."
+  - "sigrank-standard is a legacy predecessor, retained for compatibility only."
+  - "tteop-mcp is transport only — it does not define protocol semantics."

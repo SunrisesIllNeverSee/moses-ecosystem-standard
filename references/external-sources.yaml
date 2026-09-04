@@ -1,0 +1,76 @@
+# External Sources
+# DOIs, patents, and trademarks referenced by the MO§ES Ecosystem Standard.
+# Each entry points outward to an external authority or registry.
+
+sources:
+  - id: tteop-version-doi
+    type: doi
+    identifier: 10.5281/zenodo.22180349
+    description: TTEOP version DOI (Zenodo)
+    status: active
+
+  - id: tteop-concept-doi
+    type: doi
+    identifier: 10.5281/zenodo.22180348
+    description: TTEOP concept DOI (Zenodo)
+    status: active
+
+  - id: conservation-law-paper-doi
+    type: doi
+    identifier: 10.5281/zenodo.20029607
+    description: Conservation Law of Commitment paper DOI (Zenodo)
+    status: active
+
+  - id: conservation-law-concept-doi
+    type: doi
+    identifier: 10.5281/zenodo.20029608
+    description: Conservation Law of Commitment concept DOI (Zenodo)
+    status: active
+
+  - id: commitment-theory-v1-doi
+    type: doi
+    identifier: 10.5281/zenodo.20031715
+    description: Commitment Theory V.1 DOI (Zenodo)
+    status: active
+
+  - id: commitment-theory-v2-doi
+    type: doi
+    identifier: 10.5281/zenodo.21069704
+    description: Commitment Theory V2 DOI (Zenodo)
+    status: active
+
+  - id: commitment-theory-ssrn-doi
+    type: doi
+    identifier: 10.2139/ssrn.5004260
+    description: Commitment Theory SSRN DOI
+    status: active
+
+  - id: moses-trademark
+    type: trademark
+    identifier: '99408355'
+    description: MO§ES™ service mark of Ello Cello LLC (IC 042, filed 2025-09-23)
+    status: filed
+
+  - id: moses-patent
+    type: patent
+    identifier: 63/877,177
+    description: MO§ES Constitutional Governance Architecture (provisional, filed 2025-09-07)
+    status: provisional
+
+  - id: signal-compression-patent
+    type: patent
+    identifier: 63/883,018
+    description: Signal Compression System Engine (provisional)
+    status: provisional
+
+  - id: commitment-conservation-patent
+    type: patent
+    identifier: 63/991,282
+    description: Commitment Conservation under Recursive Transformation (provisional)
+    status: provisional
+
+  - id: civitae-patent
+    type: patent
+    identifier: 19/426,028
+    description: CIVITAS utility surface
+    status: filed

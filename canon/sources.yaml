@@ -1,0 +1,85 @@
+---
+# MO§ES Ecosystem Standard — Source Provenance
+#
+# Projected from Search Authority canon/shared/sources.yaml.
+# This is a public projection — the authoritative source is Search Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+
+sources:
+  - id: moses-site-data
+    type: website
+    url: https://mos2es.com
+    description: >-
+      Official MO§ES™ website. Source for MO§ES™ identity, patents,
+      trademark, and association facts.
+    status: owner_approved
+
+  - id: ct-readme
+    type: repository
+    url: https://github.com/SunrisesIllNeverSee/Commitment_Theory
+    description: >-
+      Commitment Theory repository README. Source for authorship, entity
+      identity, and naming history.
+    status: owner_approved
+
+  - id: ct-paper0
+    type: paper
+    url: https://doi.org/10.5281/zenodo.20029607
+    description: >-
+      Conservation Law of Commitment paper V.05, deposited on Zenodo.
+      Source for the law definition and formal statement.
+    status: owner_approved
+
+  - id: sigrank-readme
+    type: repository
+    url: https://github.com/SunrisesIllNeverSee/sigrank-app
+    description: >-
+      SigRank app repository README. Source for SigRank identity and the
+      operator-vs-model evaluation distinction.
+    status: owner_approved
+
+  - id: sigrank-llms
+    type: documentation
+    url: https://signalaf.com/methodology
+    description: >-
+      SigRank methodology pages at signalaf.com. Source for metric formulas,
+      the SigRank Index, and methodology details.
+    status: owner_approved
+
+  - id: owner-entity-graph-2026-08-14
+    type: owner_directive
+    url: file:///Users/dericmchenry/Developer/_control/ello-repo-control/artifacts/owner_directives/
+    description: >-
+      Owner-approved entity graph dated 2026-08-14. Source for entity
+      relationships, identity approvals, and canonical associations.
+    status: owner_approved
+
+  - id: tteop-spec-readme
+    type: repository
+    url: https://github.com/SunrisesIllNeverSee/otep-spec
+    description: >-
+      TTEOP protocol specification repository (otep-spec). Sole
+      interoperability protocol authority for token telemetry measurement.
+    status: owner_approved
+
+  - id: upsilon-architecture-directive-2026-08-28
+    type: owner_directive
+    url: file:///Users/dericmchenry/Developer/_control/ello-repo-control/artifacts/owner_directives/2026-08-28-upsilon-architecture/
+    description: >-
+      Owner directive establishing the Upsilon/SigRank/SignalAF brand
+      architecture separation. Source for product boundaries and ownership.
+    status: owner_approved
+
+  - id: tteop-authority-architecture-directive-2026-09-02
+    type: owner_directive
+    url: file:///Users/dericmchenry/Developer/_control/ello-repo-control/artifacts/owner_directives/2026-09-02-tteop-signalaf-operationalization/
+    description: >-
+      Owner directive establishing TTEOP as sole protocol authority,
+      classifying sigrank-standard as legacy, and defining product
+      implementation profiles.
+    status: owner_approved

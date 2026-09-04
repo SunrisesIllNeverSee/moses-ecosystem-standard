@@ -1,0 +1,50 @@
+# Reference: Search Authority
+# Points outward — the authoritative definition of Search Authority lives
+# in a private repository. This file does NOT copy content from that
+# authority; it records where the authority lives and what it supplies.
+
+id: search-authority
+name: Search Authority
+type: infrastructure
+role: authority
+authority_class: master_canon
+url: private repository (not publicly accessible)
+description: >-
+  The canonical internal authority for the owner's complete body of work.
+  Contains the master canon — the single source of approved canonical truth
+  for the entire MO§ES ecosystem. Search Authority is the sole master canon
+  owner; all other authorities derive from or project it.
+
+what_it_supplies:
+  - canonical names
+  - approved descriptions
+  - canonical relationships
+  - approved public claims
+  - terminology
+  - entity identity
+  - authority assignments
+
+canon_contexts:
+  - moses
+  - sigrank
+  - ecosystem
+  - commitment_theory
+  - conservation_law
+  - kassa
+  - signomy
+  - civitae
+
+governance_rules:
+  - "Exactly ONE MO§ES entity. Never duplicate it."
+  - "Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES."
+  - "Never render: MO§E§ or MO§E§™."
+  - "Do NOT collapse Signomy and CIVITAE."
+  - "SigRank evaluates AI operators, not AI models."
+  - "The harness may measure authority, but it cannot manufacture authority."
+  - "Automated systems may not promote claims into owner-approved truth."
+  - "Archetype = shape. Class = scale/qualification. Rank = field position."
+
+access_note: >-
+  Search Authority is a private repository. Canon context is loaded via
+  canon_cli.py from the SEARCH_AUTHORITY_PATH directory. If the canon
+  repository is unavailable, do not invent canonical context — ask the owner.

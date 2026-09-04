@@ -1,643 +1,603 @@
-# MO§ES Ecosystem Standard — Machine-Readable Component Registry
+# Machine-readable component registry.
+# Contains REFERENCES to ecosystem components, not copies.
+# Each entry points outward to the actual authority.
 #
-# This is the canonical public component registry for the MO§ES ecosystem.
-# It is a governed projection of the Search Authority entity graph and the
-# ello-repo-control catalog.
-#
-# Governance:
-#   - Every entry traces to Search Authority canon or owner-approved catalog.
-#   - This registry does not independently invent canonical truth.
-#   - Exactly ONE MO§ES entity. Never duplicate it.
-#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
-#   - Never render: MO§E§ or MO§E§™.
-#
-# Schema:
-#   id              — stable identifier (matches Search Authority entity_id where applicable)
-#   canonical_name  — canonical display name
-#   aliases         — accepted alternative names
-#   type            — component type (see SPEC.md §5.1)
-#   role            — primary role (see SPEC.md §5.2)
-#   family          — ecosystem family
-#   authority_class — authority class (see SPEC.md §4.1)
-#   authority_owner — which component owns canonical truth for this component
-#   status          — owner_approved | source_supported | legacy | disputed
-#   urls            — canonical URLs
-#   description     — short description
-#   relationships   — list of {predicate, target_id} pairs
-#   version         — current version pin (where applicable)
-
+# Authority source: Search Authority (private, governed master canon)
+# This file is a governed public projection. It does not independently
+# invent canonical truth.
+---
 registry_version: 0.1.0-draft
-standard_version: moses-ecosystem/0.1-draft
 last_updated: '2026-09-04'
-authority_source: search_authority
-
-# ─── Governance and Authority ───────────────────────────────────────────────
-
+standard_version: moses-ecosystem/0.1-draft
+total_components: 31
 components:
-  - id: search_authority
-    canonical_name: Search Authority
-    aliases: []
-    type: infrastructure
-    role: authority
-    family: shared-infrastructure
-    authority_class: master_canon
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/search-authority
-    description: >-
-      Canonical internal authority for the owner's complete body of work.
-      Contains the master canon. Private repository.
-    relationships:
-      - {predicate: governs, target_id: moses_ecosystem_standard}
-      - {predicate: governs, target_id: moses}
-      - {predicate: governs, target_id: sigrank}
-      - {predicate: governs, target_id: commitment_theory}
 
-  - id: moses_ecosystem_standard
-    canonical_name: MO§ES Ecosystem Standard
-    aliases: [this standard]
-    type: standard
-    role: projection
-    family: shared-infrastructure
-    authority_class: public_projection
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
-    description: >-
-      Canonical public architecture and reference standard for the entire
-      MO§ES ecosystem. Governed projection of Search Authority.
-    relationships:
-      - {predicate: projects_from, target_id: search_authority}
-      - {predicate: references, target_id: moses_framework}
-      - {predicate: references, target_id: tteop}
-      - {predicate: references, target_id: sigrank_standard_legacy}
+# ── Authority and governance entities ──────────────────────────
 
-# ─── Core Entities ──────────────────────────────────────────────────────────
+- id: search_authority
+  canonical_name: Search Authority
+  aliases: []
+  type: infrastructure
+  role: authority
+  family: shared-infrastructure
+  authority_class: master_canon
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/search-authority
+  description: Master Canon owner and authority governance. Owns canonical truth, evidence/provenance, canon versions, and canon CLI/MCP for the entire ecosystem.
+  relationships:
+  - {predicate: governs, target_id: moses_ecosystem_standard}
+  - {predicate: governs, target_id: moses_framework}
+  - {predicate: governs, target_id: tteop}
+  - {predicate: owned_by, target_id: deric_j_mchenry}
 
-  - id: moses
-    canonical_name: "MO\xA7ES\u2122"
-    aliases: ["MO\xA7ES", mos2es, MOSES]
-    type: framework
-    role: authority
-    family: moses
-    authority_class: canonical_source
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://mos2es.com
-    description: >-
-      Sovereign signal governance system. Enforcement architecture for
-      Commitment Theory. Operationalizes the Conservation Law of
-      Commitment. Governs Signomy and CIVITAE. Not a product surface.
-    relationships:
-      - {predicate: enforcement_architecture_for, target_id: commitment_theory}
-      - {predicate: operationalizes, target_id: conservation_law_of_commitment}
-      - {predicate: governs, target_id: signomy}
-      - {predicate: governs, target_id: civitae}
-      - {predicate: governs, target_id: upsilon}
-      - {predicate: governs, target_id: sigrank}
+- id: moses_ecosystem_standard
+  canonical_name: MO§ES Ecosystem Standard
+  aliases:
+  - moses-ecosystem-standard
+  type: standard
+  role: projection
+  family: moses
+  authority_class: public_projection
+  authority_owner: search_authority
+  status: draft
+  version: moses-ecosystem/0.1-draft
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
+  description: Canonical public architecture and reference standard for the entire MO§ES ecosystem. Governed projection of Search Authority.
+  relationships:
+  - {predicate: projected_from, target_id: search_authority}
+  - {predicate: references, target_id: moses_framework}
+  - {predicate: references, target_id: tteop}
+  - {predicate: references, target_id: ello_repo_control}
+  - {predicate: describes, target_id: moses}
 
-  - id: deric_j_mchenry
-    canonical_name: Deric J. McHenry
-    aliases: [Deric McHenry, djm]
-    type: research
-    role: authority
-    family: shared-infrastructure
-    authority_class: master_canon
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://orcid.org/0009-0002-9904-5390
-      - https://github.com/SunrisesIllNeverSee
-    description: >-
-      Author of Commitment Theory, the Conservation Law of Commitment,
-      and the SigRank operator evaluation system. Creator of MO§ES™.
-      ORCID 0009-0002-9904-5390.
-    relationships:
-      - {predicate: authored, target_id: commitment_theory}
-      - {predicate: created, target_id: moses}
-      - {predicate: affiliated_with, target_id: ello_cello_llc}
+- id: moses
+  canonical_name: MO§ES™
+  aliases:
+  - mos2es
+  - MOSES
+  type: framework
+  role: authority
+  family: moses
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://mos2es.com
+  description: Sovereign signal governance system and enforcement architecture for Commitment Theory. Operationalizes the Conservation Law of Commitment. Exactly ONE entity — never duplicated.
+  relationships:
+  - {predicate: owned_by, target_id: ello_cello_llc}
+  - {predicate: created_by, target_id: deric_j_mchenry}
+  - {predicate: operationalizes, target_id: commitment_theory}
+  - {predicate: enforces, target_id: conservation_law_of_commitment}
+  - {predicate: governs, target_id: signalaf}
+  - {predicate: governs, target_id: sigrank}
+  - {predicate: governs, target_id: upsilon}
+  - {predicate: governs, target_id: signomy}
+  - {predicate: governs, target_id: civitae}
+  - {predicate: governs, target_id: kassa}
+  - {predicate: formalized_in, target_id: moses_framework}
+  - {predicate: public_site, target_id: mos2es_site}
 
-  - id: ello_cello_llc
-    canonical_name: Ello Cello LLC
-    aliases: [Ello Cello]
-    type: infrastructure
-    role: authority
-    family: shared-infrastructure
-    authority_class: master_canon
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://mos2es.com/#org
-    description: >-
-      Organization associated with the owner's published works and
-      products, including SigRank and MO§ES™. Service mark owner.
-    relationships:
-      - {predicate: owns_trademark, target_id: moses}
+- id: deric_j_mchenry
+  canonical_name: Deric J. McHenry
+  aliases: []
+  type: entity
+  role: authority
+  family: shared-infrastructure
+  authority_class: master_canon
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: Owner and author of the MO§ES ecosystem, Commitment Theory, and Search Authority canon.
+  relationships:
+  - {predicate: owns, target_id: ello_cello_llc}
+  - {predicate: created, target_id: moses}
+  - {predicate: authored, target_id: commitment_theory}
+  - {predicate: owns, target_id: search_authority}
 
-# ─── Research/Framework Family ──────────────────────────────────────────────
+- id: ello_cello_llc
+  canonical_name: Ello Cello LLC
+  aliases: []
+  type: entity
+  role: authority
+  family: shared-infrastructure
+  authority_class: master_canon
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: Legal entity that owns the MO§ES™ service mark (TM 99408355) and associated intellectual property.
+  relationships:
+  - {predicate: owns_trademark, target_id: moses}
+  - {predicate: owned_by, target_id: deric_j_mchenry}
 
-  - id: moses_framework
-    canonical_name: MO§ES Framework
-    aliases: [moses-framework]
-    type: framework
-    role: canonical_source
-    family: moses
-    authority_class: canonical_source
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/moses-framework
-    description: >-
-      Canonical source code for the MO§ES™ intellectual system.
-      Machine-readable ontology, provenance ledger, claims registry,
-      and prior-art map. v0.1 — Canonical Ontology (proposal pending
-      owner freeze). Patent 63/877,177.
-    relationships:
-      - {predicate: source_for, target_id: moses}
-      - {predicate: referenced_by, target_id: moses_ecosystem_standard}
+# ── Frameworks and research ────────────────────────────────────
 
-  - id: commitment_theory
-    canonical_name: Commitment Theory
-    aliases: [CT]
-    type: research
-    role: evidence_source
-    family: commitment-theory
-    authority_class: canonical_source
-    authority_owner: search_authority
-    status: source_supported
-    urls:
-      - https://github.com/SunrisesIllNeverSee/Commitment_Theory
-      - https://doi.org/10.5281/zenodo.20031715
-    description: >-
-      Research framework containing the Conservation Law of Commitment.
-      Authored by Deric J. McHenry. Deposited on Zenodo and GitHub.
-    relationships:
-      - {predicate: contains_law, target_id: conservation_law_of_commitment}
-      - {predicate: enforcement_architecture_is, target_id: moses}
+- id: moses_framework
+  canonical_name: MO§ES Framework
+  aliases:
+  - moses-framework
+  type: framework
+  role: authority
+  family: moses
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  version: v0.1
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/moses-framework
+  description: Canonical framework repository for MO§ES™ — ontology, provenance, claims, prior-art, and measurement infrastructure. The repo is the canonical state.
+  relationships:
+  - {predicate: formalizes, target_id: moses}
+  - {predicate: governed_by, target_id: search_authority}
+  - {predicate: referenced_by, target_id: moses_ecosystem_standard}
 
-  - id: conservation_law_of_commitment
-    canonical_name: Conservation Law of Commitment
-    aliases: []
-    type: research
-    role: evidence_source
-    family: commitment-theory
-    authority_class: canonical_source
-    authority_owner: search_authority
-    status: source_supported
-    urls:
-      - https://doi.org/10.5281/zenodo.20029607
-      - https://github.com/SunrisesIllNeverSee/commitment-conservation
-      - https://signalaf.com/science
-    description: >-
-      Falsifiable empirical claim that commitment is conserved under
-      governed transformation and decays under ungoverned transformation.
-      Theoretical foundation for SigRank. MO§ES™ operationalizes it.
-    relationships:
-      - {predicate: foundation_for, target_id: sigrank}
-      - {predicate: operationalized_by, target_id: moses}
+- id: commitment_theory
+  canonical_name: Commitment Theory
+  aliases:
+  - CT
+  - Commitment_Theory
+  type: research
+  role: evidence_source
+  family: commitment-theory
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/Commitment_Theory
+    doi: https://doi.org/10.5281/zenodo.20031715
+  description: 34-paper research program built on the Conservation Law of Commitment. AI governance grounded in a falsifiable, empirically tested conservation law. CC-BY-4.0.
+  relationships:
+  - {predicate: contains, target_id: conservation_law_of_commitment}
+  - {predicate: operationalized_by, target_id: moses}
+  - {predicate: evidenced_by, target_id: kassa}
 
-  - id: kassa
-    canonical_name: KASSA
-    aliases: [K-Governed Voice Architecture]
-    type: research
-    role: evidence_source
-    family: kassa
-    authority_class: canonical_source
-    authority_owner: search_authority
-    status: source_supported
-    urls:
-      - https://github.com/SunrisesIllNeverSee/KASSA
-    description: >-
-      K-Governed Voice Architecture that publicly demonstrates MO§ES™
-      principles. Public harness is distinct from production MO§ES™
-      substrate.
-    relationships:
-      - {predicate: demonstrates, target_id: moses}
+- id: conservation_law_of_commitment
+  canonical_name: Conservation Law of Commitment
+  aliases: []
+  type: research
+  role: evidence_source
+  family: commitment-theory
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  urls:
+    doi: https://doi.org/10.5281/zenodo.20029607
+  description: Falsifiable empirical claim that commitment is conserved under governed transformation and decays under ungoverned transformation. Foundational published law. Patent pending 63/877,177.
+  relationships:
+  - {predicate: part_of, target_id: commitment_theory}
+  - {predicate: enforced_by, target_id: moses}
 
-  - id: signomy
-    canonical_name: Signomy
-    aliases: [SIGNOMY]
-    type: platform
-    role: implementation
-    family: moses
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: source_supported
-    urls:
-      - https://signomy.xyz
-    description: >-
-      Platform governed by MO§ES™. Independently resolvable entity,
-      distinct from CIVITAE.
-    relationships:
-      - {predicate: governed_by, target_id: moses}
+- id: kassa
+  canonical_name: KASSA
+  aliases:
+  - K-Governed Voice Architecture
+  type: platform
+  role: implementation
+  family: kassa
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/KASSA
+    doi: https://doi.org/10.5281/zenodo.21070813
+  description: K-Governed Voice Architecture. Commit state once, hash-lock it, let downstream agents consume K read-only. Built on the Conservation Law of Commitment.
+  relationships:
+  - {predicate: built_on, target_id: conservation_law_of_commitment}
+  - {predicate: governed_by, target_id: moses}
 
-  - id: civitae
-    canonical_name: CIVITAE
-    aliases: []
-    type: platform
-    role: implementation
-    family: moses
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: source_supported
-    urls:
-      - https://signomy.xyz
-    description: >-
-      Constitutional AI ecosystem governed by MO§ES™. Independently
-      resolvable entity, distinct from Signomy. Patent 19/426,028.
-    relationships:
-      - {predicate: governed_by, target_id: moses}
+- id: signomy
+  canonical_name: Signomy
+  aliases: []
+  type: platform
+  role: implementation
+  family: signomy
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signomy.xyz
+    repo: https://github.com/SunrisesIllNeverSee/Mos2es_Signomy
+  description: Platform governed by MO§ES™. Constitutional AI governance infrastructure, licensing architecture, and sovereign protocol. Distinct from CIVITAE — do NOT collapse.
+  relationships:
+  - {predicate: governed_by, target_id: moses}
+  - {predicate: distinct_from, target_id: civitae}
+  - {predicate: public_site, target_id: mos2es_site}
 
-# ─── SigRank Product Family ─────────────────────────────────────────────────
+- id: civitae
+  canonical_name: CIVITAE
+  aliases: []
+  type: platform
+  role: implementation
+  family: signomy
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signomy.xyz
+  description: Constitutional AI ecosystem governed by MO§ES™. Distinct from Signomy — do NOT collapse. 4 patents + trademark.
+  relationships:
+  - {predicate: governed_by, target_id: moses}
+  - {predicate: distinct_from, target_id: signomy}
 
-  - id: signalaf
-    canonical_name: SignalAF
-    aliases: []
-    type: product
-    role: projection
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://signalaf.com
-    description: >-
-      Public-facing brand and distribution surface for AI operator
-      measurement, benchmarking, education, and related products.
-      NOT the measurement engine (that is Upsilon), NOT the leaderboard
-      (that is SigRank), NOT the governance framework (that is MO§ES™).
-    relationships:
-      - {predicate: distributes, target_id: sigrank}
-      - {predicate: distributes, target_id: upsilon}
+# ── Protocols and standards ────────────────────────────────────
 
-  - id: sigrank
-    canonical_name: SigRank
-    aliases: [SigRank app]
-    type: product
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://signalaf.com
-      - https://github.com/SunrisesIllNeverSee/sigrank-app
-    description: >-
-      Public leaderboard / benchmark / proof surface for AI operator
-      evaluation. Evaluates AI operators, not AI models. Built on the
-      Conservation Law of Commitment. Produces the SigRank Index.
-    relationships:
-      - {predicate: foundation_is, target_id: conservation_law_of_commitment}
-      - {predicate: governed_by, target_id: moses}
-      - {predicate: distributed_by, target_id: signalaf}
-      - {predicate: receives_measurements_from, target_id: upsilon}
+- id: tteop
+  canonical_name: TTEOP
+  aliases:
+  - Token Telemetry Evaluation Operator Protocol
+  - otep-spec
+  - tteop-spec
+  type: protocol
+  role: authority
+  family: sigrank
+  authority_class: protocol_specification
+  authority_owner: search_authority
+  status: draft
+  version: tteop/0.1-draft
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/otep-spec
+    npm: https://www.npmjs.com/package/tteop-spec
+    doi_concept: https://doi.org/10.5281/zenodo.22180348
+    doi_version: https://doi.org/10.5281/zenodo.22180349
+  description: Sole interoperability protocol authority for token telemetry. Open, vendor-neutral standard for measuring AI-operator token efficiency. Legacy alias sigrank/0.1-draft resolves to tteop/0.1-draft.
+  relationships:
+  - {predicate: supersedes, target_id: sigrank_standard_legacy}
+  - {predicate: implemented_by, target_id: tteop_spec}
+  - {predicate: transported_by, target_id: tteop_mcp}
+  - {predicate: referenced_by, target_id: moses_ecosystem_standard}
+  - {predicate: used_by, target_id: upsilon}
+  - {predicate: used_by, target_id: sigrank_cascade}
 
-  - id: sigrank_index
-    canonical_name: SigRank Index
-    aliases: [SigRank dataset]
-    type: research
-    role: reference
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://signalaf.com/research
-      - https://signalaf.com/methodology
-    description: >-
-      The dataset/index produced by SigRank. Inspectable at
-      signalaf.com/research and /methodology.
-    relationships:
-      - {predicate: produced_by, target_id: sigrank}
+- id: tteop_spec
+  canonical_name: tteop-spec
+  aliases:
+  - otep-spec
+  type: library
+  role: reference
+  family: sigrank
+  authority_class: protocol_specification
+  authority_owner: search_authority
+  status: active
+  version: 0.1.5-draft
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/otep-spec
+    npm: https://www.npmjs.com/package/tteop-spec
+  description: Reference implementation and canonical executable semantics for TTEOP. npm package tteop-spec. Protocol specification, conformance suite, and null semantics.
+  relationships:
+  - {predicate: implements, target_id: tteop}
+  - {predicate: delegated_to_by, target_id: tteop_mcp}
+  - {predicate: delegated_to_by, target_id: sigrank_cascade}
 
-  - id: upsilon
-    canonical_name: Upsilon
-    aliases: []
-    type: product
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://mos2es.org
-    description: >-
-      Commercial measurement engine / enterprise product. Consumes
-      privacy-preserving AI usage telemetry and produces diagnostic
-      measures of AI processing behavior. Governed by MO§ES™. NOT an
-      alias for SigRank or Yield. Upsilon is the engine; Yield is a
-      metric inside Upsilon; SigRank is the public proof surface.
-    relationships:
-      - {predicate: governed_by, target_id: moses}
-      - {predicate: produces_measurements_for, target_id: sigrank}
-      - {predicate: uses, target_id: tteop}
-      - {predicate: contains_metric, target_id: yield_metric}
+- id: tteop_mcp
+  canonical_name: tteop-mcp
+  aliases: []
+  type: transport
+  role: transport
+  family: sigrank
+  authority_class: transport
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/tteop-mcp
+    npm: https://www.npmjs.com/package/tteop-mcp
+  description: Production MCP server transport for TTEOP. Exposes telemetry envelope building, validation, and description via MCP. Transport only — does not define protocol semantics.
+  relationships:
+  - {predicate: delegates_to, target_id: tteop_spec}
+  - {predicate: transports, target_id: tteop}
 
-  - id: yield_metric
-    canonical_name: "Yield (\u03A5)"
-    aliases: [Yield, "Yield metric"]
-    type: research
-    role: reference
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://mos2es.org
-    description: >-
-      Flagship metric inside Upsilon. Formula: Υ = (R × O) / I² where
-      I = input tokens, O = output tokens, R = cache read. Equivalent:
-      Yield = Leverage × Velocity. Yield is a METRIC, not a product.
-    relationships:
-      - {predicate: metric_inside, target_id: upsilon}
-      - {predicate: defined_by, target_id: tteop}
+- id: sigrank_cascade
+  canonical_name: "@sigrank/cascade"
+  aliases:
+  - sigrank-cascade
+  type: library
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  version: 0.2.1
+  urls:
+    npm: https://www.npmjs.com/package/@sigrank/cascade
+  description: SigRank product facade for TTEOP. Delegates all protocol logic to tteop-spec. Used by sigrank-mcp and other SigRank product tooling.
+  relationships:
+  - {predicate: delegates_to, target_id: tteop_spec}
+  - {predicate: used_by, target_id: sigrank_mcp}
 
-# ─── TTEOP Protocol Family ──────────────────────────────────────────────────
+- id: sigrank_standard_legacy
+  canonical_name: sigrank-standard (legacy)
+  aliases:
+  - sigrank-standard
+  - sigrank/0.1-draft
+  type: legacy
+  role: legacy_source
+  family: sigrank
+  authority_class: legacy_compatibility_source
+  authority_owner: search_authority
+  status: legacy
+  version: sigrank/0.1-draft
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-standard
+  description: Legacy predecessor of TTEOP. Original sigrank/0.1-draft measurement specification. Retained for migration evidence, historical provenance, and backward compatibility alias resolution.
+  relationships:
+  - {predicate: superseded_by, target_id: tteop}
+  - {predicate: alias_resolves_to, target_id: tteop}
 
-  - id: tteop
-    canonical_name: TTEOP
-    aliases: [otep-spec, tteop-spec, "Token Telemetry Evaluation Operator Protocol"]
-    type: protocol
-    role: authority
-    family: sigrank
-    authority_class: protocol_specification
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/otep-spec
-      - https://www.npmjs.com/package/tteop-spec
-      - https://doi.org/10.5281/zenodo.22180349
-    version: tteop/0.1-draft
-    description: >-
-      Open, vendor-neutral interoperability protocol for measuring AI
-      operator token efficiency. Defines four telemetry primitives
-      (I, O, W, R), five derived metrics, telemetry envelope schema,
-      privacy modes, provenance levels, and conformance tests. SOLE
-      interoperability protocol authority for the token telemetry
-      measurement layer.
-    relationships:
-      - {predicate: implemented_by, target_id: tteop_spec}
-      - {predicate: transported_by, target_id: tteop_mcp}
-      - {predicate: used_by, target_id: upsilon}
-      - {predicate: used_by, target_id: sigrank_mcp}
-      - {predicate: has_legacy_alias, target_id: sigrank_standard_legacy}
+# ── Products ───────────────────────────────────────────────────
 
-  - id: tteop_spec
-    canonical_name: tteop-spec
-    aliases: [otep-spec package]
-    type: standard
-    role: reference
-    family: sigrank
-    authority_class: protocol_specification
-    authority_owner: tteop
-    status: owner_approved
-    urls:
-      - https://www.npmjs.com/package/tteop-spec
-    version: 0.1.5-draft
-    description: >-
-      Executable/reference implementation of TTEOP canonical semantics.
-      npm package. Owns metric formulas, null semantics, banker's
-      rounding, and conformance vectors.
-    relationships:
-      - {predicate: implements, target_id: tteop}
-      - {predicate: delegated_to_by, target_id: sigrank_cascade}
+- id: signalaf
+  canonical_name: SignalAF
+  aliases:
+  - signalaf-app
+  - sigrank-app-v2
+  type: product
+  role: projection
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+    repo: https://github.com/SunrisesIllNeverSee/signalaf
+  description: Public brand and distribution surface for the SigRank ecosystem. NOT the measurement engine (that is Upsilon), NOT the leaderboard (that is SigRank).
+  relationships:
+  - {predicate: distributes, target_id: sigrank}
+  - {predicate: distinct_from, target_id: upsilon}
+  - {predicate: distinct_from, target_id: sigrank}
+  - {predicate: governed_by, target_id: moses}
+  - {predicate: superseded_by_repo, target_id: sigrank_app}
 
-  - id: tteop_mcp
-    canonical_name: tteop-mcp
-    aliases: []
-    type: transport
-    role: transport
-    family: sigrank
-    authority_class: transport
-    authority_owner: tteop
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/tteop-mcp
-    description: >-
-      Thin MCP transport that delegates to tteop-spec. Does not define
-      protocol semantics. stdout reserved for JSON-RPC; diagnostics on
-      stderr.
-    relationships:
-      - {predicate: transports, target_id: tteop}
-      - {predicate: delegates_to, target_id: tteop_spec}
+- id: sigrank
+  canonical_name: SigRank
+  aliases: []
+  type: product
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+  description: Public leaderboard and proof surface. Evaluates AI operators, not AI models. Ranks by yield (Υ), not volume.
+  relationships:
+  - {predicate: distributed_by, target_id: signalaf}
+  - {predicate: measured_by, target_id: upsilon}
+  - {predicate: uses_protocol, target_id: tteop}
+  - {predicate: governed_by, target_id: moses}
+  - {predicate: has_dataset, target_id: sigrank_index}
 
-  - id: sigrank_cascade
-    canonical_name: "@sigrank/cascade"
-    aliases: [sigrank-cascade]
-    type: standard
-    role: reference
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://www.npmjs.com/package/@sigrank/cascade
-    version: 0.2.1
-    description: >-
-      SigRank product facade over TTEOP canonical semantics. Delegates
-      computeMetrics() to tteop-spec. Maps output_fraction → snr,
-      log_leverage → dev10x. Adds RS05 class taxonomy, operator
-      signatures, field ranking. Does not redefine TTEOP semantics.
-    relationships:
-      - {predicate: delegates_to, target_id: tteop_spec}
-      - {predicate: used_by, target_id: sigrank_mcp}
+- id: sigrank_index
+  canonical_name: SigRank Index
+  aliases: []
+  type: research
+  role: evidence_source
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: Dataset of AI operator evaluation results. Anonymized token telemetry only — never prompt content.
+  relationships:
+  - {predicate: belongs_to, target_id: sigrank}
 
-  - id: sigrank_standard_legacy
-    canonical_name: sigrank-standard
-    aliases: [sigrank/0.1-draft]
-    type: legacy
-    role: legacy_source
-    family: sigrank
-    authority_class: legacy_compatibility_source
-    authority_owner: search_authority
-    status: legacy
-    urls:
-      - https://github.com/SunrisesIllNeverSee/sigrank-standard
-    description: >-
-      LEGACY PREDECESSOR. Superseded by TTEOP. Retained only for
-      backward compatibility and migration evidence. Legacy alias
-      sigrank/0.1-draft resolves to tteop/0.1-draft, not to a second
-      active standard.
-    relationships:
-      - {predicate: superseded_by, target_id: tteop}
-      - {predicate: legacy_alias_resolves_to, target_id: tteop}
+- id: upsilon
+  canonical_name: Upsilon
+  aliases:
+  - b2bpilot
+  type: product
+  role: implementation
+  family: moses
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://mos2es.org
+    enterprise: https://enterprise.mos2es.org
+    repo: https://github.com/SunrisesIllNeverSee/upsilon
+  description: Commercial measurement engine and enterprise AI operator evaluation product. Implements TTEOP. NOT the same as Yield — Upsilon is the engine; Yield is a metric inside it.
+  relationships:
+  - {predicate: implements, target_id: tteop}
+  - {predicate: contains_metric, target_id: yield_metric}
+  - {predicate: distinct_from, target_id: sigrank}
+  - {predicate: distinct_from, target_id: signalaf}
+  - {predicate: governed_by, target_id: moses}
 
-# ─── SigRank Implementation Components ──────────────────────────────────────
+- id: yield_metric
+  canonical_name: Yield
+  aliases:
+  - Υ
+  type: metric
+  role: reference
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: Flagship metric inside Upsilon. Υ = (R × O) / I² where R = cache_read, O = output, I = input. NOT the same as Upsilon — Yield is a metric, Upsilon is the engine.
+  relationships:
+  - {predicate: inside, target_id: upsilon}
+  - {predicate: defined_by, target_id: tteop}
+  - {predicate: displayed_on, target_id: sigrank}
 
-  - id: sigrank_app
-    canonical_name: sigrank-app
-    aliases: [sigrank-app-v1]
-    type: product
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/sigrank-app
-      - https://signalaf.com
-    description: >-
-      Main Next.js app at signalaf.com. Leaderboard, profiles, field
-      analysis. Supersedes the original signalaf repo.
-    relationships:
-      - {predicate: implements, target_id: sigrank}
-      - {predicate: depends_on, target_id: sigrank_mcp}
+- id: sigrank_app
+  canonical_name: SigRank App
+  aliases:
+  - sigrank-app
+  - sigrank-app-v1
+  type: product
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-app
+  description: "Next.js app for SigRank SignalAF — AI operator evaluation leaderboard. Ranks how efficiently you use AI by token cascade efficiency. Privacy-preserving: token counts only."
+  relationships:
+  - {predicate: supersedes_repo, target_id: signalaf}
+  - {predicate: implements, target_id: sigrank}
+  - {predicate: deploys_to, target_id: signalaf}
 
-  - id: sigrank_mcp
-    canonical_name: sigrank-mcp
-    aliases: []
-    type: transport
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/sigrank-mcp
-    description: >-
-      On-device scanner and MCP tool for SigRank. Product tooling and
-      TTEOP producer/consumer. Uses @sigrank/cascade for canonical
-      metric computation. Does not independently implement TTEOP
-      formulas.
-    relationships:
-      - {predicate: depends_on, target_id: sigrank_cascade}
-      - {predicate: uses, target_id: tteop}
-      - {predicate: implements, target_id: sigrank}
+- id: sigrank_mcp
+  canonical_name: SigRank MCP
+  aliases:
+  - sigrank-mcp
+  type: tool
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-mcp
+    npm: https://www.npmjs.com/package/sigrank
+  description: On-device token scanner + MCP server. Yield cascade + live leaderboard as MCP tools any agent can call. 23 tools, TUI, signed submit.
+  relationships:
+  - {predicate: depends_on, target_id: sigrank_cascade}
+  - {predicate: depends_on, target_id: tteop_spec}
+  - {predicate: serves, target_id: sigrank}
 
-  - id: sigrank_vscode
-    canonical_name: sigrank-vscode
-    aliases: []
-    type: tool
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/sigrank-vscode
-    description: VS Code extension for SigRank.
-    relationships:
-      - {predicate: companion_to, target_id: sigrank_app}
+- id: sigrank_vscode
+  canonical_name: SigRank VS Code
+  aliases:
+  - sigrank-vscode
+  type: tool
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-vscode
+  description: VS Code extension measuring AI coding operator token efficiency (Yield/Υ) inline. Token counts only — never prompt content.
+  relationships:
+  - {predicate: measures, target_id: yield_metric}
+  - {predicate: serves, target_id: sigrank}
 
-  - id: sigrank_agent
-    canonical_name: sigrank-agent
-    aliases: []
-    type: tool
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/sigrank-agent
-    description: Local telemetry agent for SigRank.
-    relationships:
-      - {predicate: companion_to, target_id: sigrank_app}
+- id: sigrank_agent
+  canonical_name: SigRank Agent
+  aliases:
+  - sigrank-agent
+  type: tool
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: archived
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-agent
+  description: Local telemetry agent — privacy-preserving CLI that scans AI platform logs, computes the metric stack, and publishes signed snapshots. Moved to archive 2026-07-06.
+  relationships:
+  - {predicate: serves, target_id: sigrank}
 
-  - id: sigarena
-    canonical_name: sigarena
-    aliases: []
-    type: tool
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    description: Satellite site for SigRank.
-    relationships:
-      - {predicate: companion_to, target_id: sigrank_app}
+- id: sigarena
+  canonical_name: SigArena
+  aliases:
+  - sigarena
+  type: product
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://sigarena.vercel.app
+    repo: https://github.com/SunrisesIllNeverSee/sigarena
+  description: AI User Leaderboard — SigRank's satellite site. Read-only leaderboard that routes to signalaf.com for measurement and submission.
+  relationships:
+  - {predicate: satellite_of, target_id: sigrank}
+  - {predicate: routes_to, target_id: signalaf}
 
-  - id: signa
-    canonical_name: signa
-    aliases: []
-    type: tool
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    description: Companion tool for SigRank.
-    relationships:
-      - {predicate: companion_to, target_id: sigrank_app}
+- id: signa
+  canonical_name: signa
+  aliases: []
+  type: tool
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/signa
+  description: Interactive token-cascade agent. Reads AI coding session logs locally, computes the cascade (Υ/SNR/Leverage/Velocity), builds behavioral taste profile, and coaches.
+  relationships:
+  - {predicate: computes, target_id: yield_metric}
+  - {predicate: serves, target_id: sigrank}
 
-  - id: sigadmin_web
-    canonical_name: sigadmin-web
-    aliases: []
-    type: tool
-    role: implementation
-    family: sigrank
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    description: Admin dashboard for SigRank.
-    relationships:
-      - {predicate: companion_to, target_id: sigrank_app}
+- id: sigadmin_web
+  canonical_name: SigAdmin Web
+  aliases:
+  - sigadmin-web
+  type: product
+  role: implementation
+  family: sigrank
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigadmin-web
+  description: SigRank admin dashboard — CRM + sigadmin merged. Auth-gated. admin.signalaf.com. NOT public.
+  relationships:
+  - {predicate: administers, target_id: sigrank}
+  - {predicate: administers, target_id: signalaf}
 
-# ─── MO§ES Governance and Sites ─────────────────────────────────────────────
+# ── Sites and governance implementations ──────────────────────
 
-  - id: mos2es_site
-    canonical_name: mos2es.com
-    aliases: [mos2es-site]
-    type: site
-    role: projection
-    family: moses
-    authority_class: public_projection
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://mos2es.com
-    description: Official MO§ES™ website.
-    relationships:
-      - {predicate: projection_of, target_id: moses}
+- id: mos2es_site
+  canonical_name: mos2es.com
+  aliases:
+  - mos2es-site
+  type: site
+  role: projection
+  family: moses
+  authority_class: public_projection
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://mos2es.com
+    repo: https://github.com/SunrisesIllNeverSee/mos2es-site
+  description: Static landing page for mos2es.com — the MO§ES™ governance framework website. Public projection of the MO§ES ecosystem.
+  relationships:
+  - {predicate: public_projection_of, target_id: moses}
+  - {predicate: governed_by, target_id: search_authority}
 
-  - id: moses_governance
-    canonical_name: moses-governance
-    aliases: []
-    type: governance
-    role: implementation
-    family: moses
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    description: Governance framework implementing MO§ES™.
-    relationships:
-      - {predicate: implements, target_id: moses}
+- id: moses_governance
+  canonical_name: MO§ES Governance
+  aliases:
+  - moses-governance
+  type: governance
+  role: implementation
+  family: moses
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/moses-governance
+    website: https://mos2es.com
+  description: MO§ES™ governance framework — constitutional AI governance built on the Conservation Law of Commitment. Six-Gate Protocol, role hierarchy, SHA-256 audit chain. Patent pending 63/877,177.
+  relationships:
+  - {predicate: implements, target_id: moses}
+  - {predicate: built_on, target_id: conservation_law_of_commitment}
 
-  - id: moses_integration
-    canonical_name: moses-integration
-    aliases: []
-    type: infrastructure
-    role: implementation
-    family: moses
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    description: >-
-      Framework distribution and schema distribution. Downstream consumer
-      of MO§ES Framework.
-    relationships:
-      - {predicate: distributes, target_id: moses_framework}
-
-# ─── Shared Infrastructure ──────────────────────────────────────────────────
-
-  - id: ello_repo_control
-    canonical_name: ello-repo-control
-    aliases: []
-    type: infrastructure
-    role: reference
-    family: shared-infrastructure
-    authority_class: product_implementation
-    authority_owner: search_authority
-    status: owner_approved
-    urls:
-      - https://github.com/SunrisesIllNeverSee/ello-repo-control
-    description: >-
-      Durable repository control plane for the owner's complete GitHub,
-      code, research, product, patent, website, MCP, experiment, and
-      agent estate. Contains the REPO_REGISTRY, authority map, and
-      relationship graph.
-    relationships:
-      - {predicate: catalogs, target_id: moses_ecosystem_standard}
+- id: ello_repo_control
+  canonical_name: Ello Repo Control
+  aliases:
+  - ello-repo-control
+  type: infrastructure
+  role: reference
+  family: shared-infrastructure
+  authority_class: master_canon
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/ello-repo-control
+  description: Durable repository control plane for the owner's complete GitHub, code, research, product, patent, website, MCP, experiment, and agent estate. Supplies operational identity (repo_id, location, lifecycle).
+  relationships:
+  - {predicate: supplies_identity_to, target_id: moses_ecosystem_standard}
+  - {predicate: tracks, target_id: moses_framework}
+  - {predicate: tracks, target_id: tteop}
+  - {predicate: tracks, target_id: signalaf}
+  - {predicate: tracks, target_id: upsilon}

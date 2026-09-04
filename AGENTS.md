@@ -6,6 +6,9 @@ This is the **canonical public architecture and reference standard** for the
 entire MO§ES ecosystem. It is a governed public projection of the Search
 Authority master canon.
 
+It is a **canonical information package**, not a product monorepo. It
+contains references to ecosystem components, not copies of them.
+
 It answers: **What is the MO§ES ecosystem, what components belong to it,
 what roles do they have, how do they relate, and which authority governs
 each type of information?**
@@ -22,6 +25,35 @@ framework's claims (MO§ES Framework), what are the protocol semantics
   claim traces to Search Authority.
 - Disputed claims in Search Authority remain disputed here — this standard
   does not resolve them.
+
+## Information sources
+
+```
+                    SEARCH AUTHORITY
+                 approved canonical truth
+                         │
+                         ▼
+               MO§ES ECOSYSTEM STANDARD
+                public canonical overview
+                   ▲        ▲        ▲
+                   │        │        │
+             formal refs   specs   implementation identity
+                   │        │        │
+         MO§ES Framework  TTEOP   Ello Control
+```
+
+- **Search Authority** supplies: canonical names, approved descriptions,
+  canonical relationships, approved public claims, terminology, entity
+  identity, authority assignments.
+- **MO§ES Framework** supplies: formal framework references, claim IDs,
+  ontology concepts, framework version, formal status. The standard
+  references those; it does not absorb ownership of them.
+- **TTEOP** supplies: protocol identity, protocol version, protocol role,
+  canonical protocol URL. The standard says "TTEOP is the measurement
+  protocol used here." It does not copy the metric specification.
+- **Ello Control** supplies: repo_id, current repo/location, lifecycle,
+  implementation relationship, deployment mapping. This is operational
+  identity, not canonical truth.
 
 ## Governance rules (from Search Authority)
 
@@ -66,18 +98,9 @@ ask the owner.
 ## Validation
 
 ```bash
-# Validate the component registry YAML parses
-python3 -c "import yaml; yaml.safe_load(open('registry/components.yaml'))"
-
-# Validate the SPEC.md sections are present
-python3 -c "
-import re
-with open('SPEC.md') as f:
-    content = f.read()
-sections = re.findall(r'^## (\d+\. .+)$', content, re.MULTILINE)
-assert len(sections) >= 20, f'Expected 20 sections, found {len(sections)}'
-print(f'OK: {len(sections)} sections found')
-"
+python3 validation/validate-standard.py
+python3 validation/validate-authority-links.py
+python3 validation/validate-canon-provenance.py
 ```
 
 ## Git behavior
@@ -86,13 +109,20 @@ print(f'OK: {len(sections)} sections found')
 - Do not force-push the default branch.
 - This is a public repo — be conservative about what goes in.
 
-## Files
+## Repository structure
 
 ```
-README.md              — overview and quick reference
-SPEC.md                — the standard (20 sections)
+README.md              — overview
+STANDARD.md            — the standard (20 sections)
+VERSION.yaml           — version metadata
+CHANGELOG.md           — change history
 LICENSE                — CC BY 4.0
 AGENTS.md              — this file
-registry/
-  components.yaml      — machine-readable component registry
+canon/                 — structured canonical information
+architecture/          — human-readable architecture documents
+registry/              — machine-readable registries (references, not copies)
+references/            — references to external authorities
+machine/               — machine-readable standard metadata
+validation/            — validation scripts
+docs/                  — documentation
 ```

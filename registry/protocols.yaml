@@ -1,0 +1,101 @@
+# Machine-readable protocols registry.
+# Contains REFERENCES to ecosystem protocols, not copies.
+# Each entry points outward to the actual authority.
+---
+registry_version: 0.1.0-draft
+last_updated: '2026-09-04'
+standard_version: moses-ecosystem/0.1-draft
+total_protocols: 4
+protocols:
+
+- id: tteop
+  name: TTEOP
+  canonical_name: Token Telemetry Evaluation Operator Protocol
+  version: tteop/0.1-draft
+  status: draft
+  role: Sole interoperability protocol authority for token telemetry
+  authority_class: protocol_specification
+  authority_owner: search_authority
+  repository: otep-spec
+  npm: tteop-spec
+  legacy_alias: sigrank/0.1-draft
+  doi: 10.5281/zenodo.22180349
+  doi_concept: 10.5281/zenodo.22180348
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/otep-spec
+    npm: https://www.npmjs.com/package/tteop-spec
+    doi: https://doi.org/10.5281/zenodo.22180349
+    doi_concept: https://doi.org/10.5281/zenodo.22180348
+  description: >
+    Open, vendor-neutral interoperability standard for measuring AI-operator
+    token efficiency. Sole protocol authority for telemetry schemas, formulas,
+    null semantics, privacy, provenance, and conformance. Legacy alias
+    sigrank/0.1-draft resolves to tteop/0.1-draft for backward compatibility.
+  relationships:
+  - {predicate: supersedes, target_id: sigrank_standard_legacy}
+  - {predicate: implemented_by, target_id: tteop_spec}
+  - {predicate: transported_by, target_id: tteop_mcp}
+  - {predicate: used_by, target_id: sigrank_cascade}
+
+- id: tteop_spec
+  name: tteop-spec
+  canonical_name: tteop-spec (reference implementation)
+  version: 0.1.5-draft
+  status: active
+  role: Reference implementation and canonical executable semantics for TTEOP
+  authority_class: protocol_specification
+  authority_owner: search_authority
+  repository: otep-spec
+  npm: tteop-spec
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/otep-spec
+    npm: https://www.npmjs.com/package/tteop-spec
+  description: >
+    Reference implementation and canonical executable semantics for TTEOP.
+    npm package tteop-spec@0.1.5-draft. Contains protocol specification,
+    conformance suite, and null semantics. All downstream protocol consumers
+    delegate to this package for semantics.
+  relationships:
+  - {predicate: implements, target_id: tteop}
+  - {predicate: delegated_to_by, target_id: tteop_mcp}
+  - {predicate: delegated_to_by, target_id: sigrank_cascade}
+
+- id: tteop_mcp
+  name: tteop-mcp
+  canonical_name: tteop-mcp (transport)
+  status: active
+  role: MCP transport layer for TTEOP
+  authority_class: transport
+  authority_owner: search_authority
+  repository: tteop-mcp
+  npm: tteop-mcp
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/tteop-mcp
+    npm: https://www.npmjs.com/package/tteop-mcp
+  description: >
+    Production MCP server transport for TTEOP. Exposes telemetry envelope
+    building, validation, and description via Model Context Protocol.
+    Transport only — does not define protocol semantics. All protocol logic
+    delegated to tteop-spec. Must not redefine TTEOP semantics.
+  relationships:
+  - {predicate: delegates_to, target_id: tteop_spec}
+  - {predicate: transports, target_id: tteop}
+
+- id: sigrank_cascade
+  name: "@sigrank/cascade"
+  canonical_name: SigRank Cascade (product facade)
+  version: 0.2.1
+  status: active
+  role: Product facade delegating to tteop-spec
+  authority_class: product_implementation
+  authority_owner: search_authority
+  npm: "@sigrank/cascade"
+  urls:
+    npm: https://www.npmjs.com/package/@sigrank/cascade
+  description: >
+    SigRank product facade for TTEOP. Delegates all protocol logic to
+    tteop-spec@0.1.5-draft (exact pin). Used by sigrank-mcp and other
+    SigRank product tooling. Does not independently define protocol semantics.
+  relationships:
+  - {predicate: delegates_to, target_id: tteop_spec}
+  - {predicate: used_by, target_id: sigrank_mcp}

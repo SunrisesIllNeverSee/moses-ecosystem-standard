@@ -1,0 +1,57 @@
+# Machine-readable public sites registry.
+# Contains REFERENCES to ecosystem public sites, not copies.
+# Each entry points outward to the actual authority.
+---
+registry_version: 0.1.0-draft
+last_updated: '2026-09-04'
+standard_version: moses-ecosystem/0.1-draft
+total_sites: 9
+sites:
+
+- id: mos2es_com
+  url: https://mos2es.com
+  entity_id: moses
+  role: MO§ES™ website
+  status: active
+
+- id: signalaf_com
+  url: https://signalaf.com
+  entity_id: signalaf
+  role: SignalAF public brand and distribution surface
+  status: active
+
+- id: signalaf_methodology
+  url: https://signalaf.com/methodology
+  entity_id: signalaf
+  role: SignalAF methodology page
+  status: active
+
+- id: signalaf_research
+  url: https://signalaf.com/research
+  entity_id: signalaf
+  role: SignalAF research page
+  status: active
+
+- id: signalaf_science
+  url: https://signalaf.com/science
+  entity_id: signalaf
+  role: SignalAF science page
+  status: active
+
+- id: signomy_xyz
+  url: https://signomy.xyz
+  entity_id: signomy
+  role: Signomy / CIVITAE platform
+  status: active
+
+- id: mos2es_org
+  url: https://mos2es.org
+  entity_id: upsilon
+  role: Upsilon commercial measurement engine
+  status: active
+
+- id: moses_ecosystem_standard_repo
+  url: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
+  entity_id: moses_ecosystem_standard
+  role: MO§ES Ecosystem Standard repository
+  status: active

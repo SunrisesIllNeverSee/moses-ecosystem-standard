@@ -1,0 +1,198 @@
+---
+# MO§ES Ecosystem Standard — Entity Registry
+#
+# Projected from Search Authority canon/shared/entities.yaml.
+# This is a public projection — the authoritative source is Search Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+
+entities:
+  - id: deric_j_mchenry
+    canonical_name: Deric J. McHenry
+    entity_type: person
+    aliases: [Deric McHenry, djm]
+    canonical_urls:
+      - https://orcid.org/0009-0002-9904-5390
+      - https://github.com/SunrisesIllNeverSee
+    description: >-
+      Author of Commitment Theory, the Conservation Law of Commitment, and
+      the SigRank operator evaluation system. ORCID 0009-0002-9904-5390.
+    status: owner_approved
+    source_refs: [ct-readme, moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: ello_cello_llc
+    canonical_name: Ello Cello LLC
+    entity_type: organization
+    aliases: [Ello Cello]
+    canonical_urls:
+      - https://mos2es.com/#org
+    description: >-
+      Organization associated with the owner's published works and products,
+      including SigRank and MO§ES™.
+    status: owner_approved
+    source_refs: [ct-readme, moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: moses
+    canonical_name: "MO\xA7ES\u2122"
+    entity_type: system
+    aliases: ["MO\xA7ES", mos2es, MOSES]
+    canonical_urls:
+      - https://mos2es.com
+    description: >-
+      Sovereign signal governance system. Enforcement architecture for
+      Commitment Theory; operationalizes the Conservation Law of Commitment.
+      Governs Signomy and CIVITAE.
+    status: owner_approved
+    source_refs: [moses-site-data, owner-entity-graph-2026-08-14]
+
+  - id: commitment_theory
+    canonical_name: Commitment Theory
+    entity_type: theory
+    aliases: [CT]
+    canonical_urls:
+      - https://github.com/SunrisesIllNeverSee/Commitment_Theory
+      - https://doi.org/10.5281/zenodo.20031715
+    description: >-
+      Research framework containing the Conservation Law of Commitment.
+      MO§ES™ is its enforcement architecture. Authored by Deric J. McHenry.
+    status: source_supported
+    source_refs: [ct-readme, ct-p000]
+
+  - id: conservation_law_of_commitment
+    canonical_name: Conservation Law of Commitment
+    entity_type: scientific_law
+    aliases: []
+    canonical_urls:
+      - https://doi.org/10.5281/zenodo.20029607
+      - https://github.com/SunrisesIllNeverSee/commitment-conservation
+      - https://signalaf.com/science
+    description: >-
+      Falsifiable empirical claim that commitment is conserved under governed
+      transformation and decays under ungoverned transformation. Foundation
+      for SigRank; operationalized by MO§ES™.
+    status: source_supported
+    source_refs: [ct-paper0, owner-entity-graph-2026-08-14]
+
+  - id: sigrank
+    canonical_name: SigRank
+    entity_type: evaluation_system
+    aliases: [SigRank app]
+    canonical_urls:
+      - https://signalaf.com
+      - https://github.com/SunrisesIllNeverSee/sigrank-app
+    description: >-
+      Public leaderboard / benchmark / proof surface for AI operator
+      evaluation. Evaluates AI operators, not models. Built on the
+      Conservation Law of Commitment. Produces the SigRank Index.
+    status: owner_approved
+    source_refs: [sigrank-readme, sigrank-llms, owner-entity-graph-2026-08-14, upsilon-architecture-directive-2026-08-28]
+
+  - id: sigrank_index
+    canonical_name: SigRank Index
+    entity_type: dataset
+    aliases: [SigRank dataset]
+    canonical_urls:
+      - https://signalaf.com/research
+      - https://signalaf.com/methodology
+    description: >-
+      The dataset/index produced by SigRank. Inspectable at
+      signalaf.com/research and /methodology.
+    status: owner_approved
+    source_refs: [sigrank-llms, owner-entity-graph-2026-08-14]
+
+  - id: kassa
+    canonical_name: KASSA
+    entity_type: architecture
+    aliases: [K-Governed Voice Architecture]
+    canonical_urls:
+      - https://github.com/SunrisesIllNeverSee/KASSA
+    description: >-
+      K-Governed Voice Architecture that commits state before intelligence
+      branches. Publicly demonstrates MO§ES™ principles; distinct from the
+      protected production MO§ES™ substrate.
+    status: source_supported
+    source_refs: [kassa-readme, owner-entity-graph-2026-08-14]
+
+  - id: signomy
+    canonical_name: Signomy
+    entity_type: platform
+    aliases: [SIGNOMY]
+    canonical_urls:
+      - https://signomy.xyz
+    description: >-
+      Platform governed by MO§ES™. Independently resolvable entity, distinct
+      from CIVITAE.
+    status: source_supported
+    source_refs: [ct-readme, signomy-site, owner-entity-graph-2026-08-14]
+
+  - id: civitae
+    canonical_name: CIVITAE
+    entity_type: platform
+    aliases: []
+    canonical_urls:
+      - https://signomy.xyz
+    description: >-
+      Constitutional AI ecosystem governed by MO§ES™. Independently
+      resolvable entity, distinct from Signomy. Patent 19/426,028 covers the
+      CIVITAS utility surface.
+    status: source_supported
+    source_refs: [ct-readme, signomy-site, owner-entity-graph-2026-08-14]
+
+  - id: upsilon
+    canonical_name: Upsilon
+    entity_type: product
+    aliases: []
+    canonical_urls:
+      - https://mos2es.org
+    description: >-
+      Commercial measurement engine / enterprise product. Consumes
+      privacy-preserving AI usage telemetry and produces diagnostic measures.
+      Governed by MO§ES™. Not an alias for SigRank or Yield.
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - id: yield_metric
+    canonical_name: "Yield (\u03A5)"
+    entity_type: dataset
+    aliases: [Yield, "Yield metric"]
+    canonical_urls:
+      - https://mos2es.org
+    description: >-
+      Flagship metric inside Upsilon. Formula: Υ = (R × O) / I². Yield is a
+      metric, not a product. Do not collapse with Upsilon.
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - id: signalaf
+    canonical_name: SignalAF
+    entity_type: platform
+    aliases: []
+    canonical_urls:
+      - https://signalaf.com
+    description: >-
+      Public-facing brand and distribution surface for AI operator
+      measurement, benchmarking, and education. Not the measurement engine
+      (Upsilon), not the leaderboard (SigRank), not the governance framework
+      (MO§ES™). Owned by Ello Cello LLC.
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - id: tteop
+    canonical_name: TTEOP
+    entity_type: architecture
+    aliases: [otep-spec, tteop-spec, "Token Telemetry Evaluation Operator Protocol"]
+    canonical_urls:
+      - https://github.com/SunrisesIllNeverSee/otep-spec
+      - https://www.npmjs.com/package/tteop-spec
+      - https://doi.org/10.5281/zenodo.22180349
+    description: >-
+      Open, vendor-neutral interoperability protocol for measuring AI operator
+      token efficiency. Sole protocol authority for the token telemetry
+      measurement layer. Products implement TTEOP through version-pinned
+      implementation profiles.
+    status: owner_approved
+    source_refs: [tteop-spec-readme, tteop-authority-architecture-directive-2026-09-02]

@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "url": "schema:url",
+    "author": "schema:author",
+    "publisher": "schema:publisher",
+    "license": "schema:license",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified"
+  },
+  "@type": "Standard",
+  "name": "MO§ES Ecosystem Standard",
+  "description": "The canonical public architecture and reference standard for the entire MO§ES ecosystem. A governed public projection of the Search Authority master canon.",
+  "version": "0.1.0-draft",
+  "url": "https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard",
+  "author": {
+    "@type": "Person",
+    "name": "Deric J. McHenry"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ello Cello LLC"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "dateCreated": "2026-09-04",
+  "dateModified": "2026-09-04"
+}

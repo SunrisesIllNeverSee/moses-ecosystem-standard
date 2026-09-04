@@ -1,0 +1,240 @@
+# Machine-readable products registry.
+# Contains REFERENCES to ecosystem products, not copies.
+# Each entry points outward to the actual authority.
+---
+registry_version: 0.1.0-draft
+last_updated: '2026-09-04'
+standard_version: moses-ecosystem/0.1-draft
+total_products: 12
+products:
+
+- id: signalaf
+  canonical_name: SignalAF
+  type: product
+  family: sigrank
+  role: Public brand and distribution surface
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+  description: >
+    Public brand and distribution surface for the SigRank ecosystem.
+    NOT the measurement engine (that is Upsilon), NOT the leaderboard
+    (that is SigRank).
+  implementation_repo_id: sigrank_app
+  relationships:
+  - {predicate: distributes, target_id: sigrank}
+  - {predicate: distinct_from, target_id: upsilon}
+  - {predicate: distinct_from, target_id: sigrank}
+
+- id: sigrank
+  canonical_name: SigRank
+  type: product
+  family: sigrank
+  role: Public leaderboard and proof surface
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+  description: >
+    Public leaderboard and proof surface. Evaluates AI operators, not AI
+    models. Ranks by yield (Υ), not volume.
+  implementation_repo_id: sigrank_app
+  relationships:
+  - {predicate: distributed_by, target_id: signalaf}
+  - {predicate: measured_by, target_id: upsilon}
+  - {predicate: uses_protocol, target_id: tteop}
+  - {predicate: has_dataset, target_id: sigrank_index}
+
+- id: sigrank_index
+  canonical_name: SigRank Index
+  type: dataset
+  family: sigrank
+  role: Dataset
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: >
+    Dataset of AI operator evaluation results. Anonymized token telemetry
+    only — never prompt content.
+  implementation_repo_id: sigrank_app
+  relationships:
+  - {predicate: belongs_to, target_id: sigrank}
+
+- id: upsilon
+  canonical_name: Upsilon
+  aliases:
+  - b2bpilot
+  type: product
+  family: moses
+  role: Commercial measurement engine
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://mos2es.org
+    enterprise: https://enterprise.mos2es.org
+  description: >
+    Commercial measurement engine and enterprise AI operator evaluation
+    product. Implements TTEOP. NOT the same as Yield — Upsilon is the
+    engine; Yield is a metric inside it.
+  implementation_repo_id: upsilon
+  relationships:
+  - {predicate: implements, target_id: tteop}
+  - {predicate: contains_metric, target_id: yield_metric}
+  - {predicate: distinct_from, target_id: sigrank}
+  - {predicate: distinct_from, target_id: signalaf}
+
+- id: yield_metric
+  canonical_name: Yield
+  aliases:
+  - Υ
+  type: metric
+  family: sigrank
+  role: Metric inside Upsilon
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls: {}
+  description: >
+    Flagship metric inside Upsilon. Υ = (R × O) / I² where R = cache_read,
+    O = output, I = input. NOT the same as Upsilon — Yield is a metric,
+    Upsilon is the engine.
+  implementation_repo_id: upsilon
+  relationships:
+  - {predicate: inside, target_id: upsilon}
+  - {predicate: defined_by, target_id: tteop}
+
+- id: sigrank_app
+  canonical_name: SigRank App
+  type: product
+  family: sigrank
+  role: Next.js application
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://signalaf.com
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-app
+  description: >
+    Next.js app for SigRank SignalAF — AI operator evaluation leaderboard.
+    Ranks how efficiently you use AI by token cascade efficiency
+    (Υ = cache_read × output / input²). Privacy-preserving: token counts
+    only, never prompt content.
+  implementation_repo_id: sigrank_app
+  relationships:
+  - {predicate: implements, target_id: sigrank}
+  - {predicate: deploys_to, target_id: signalaf}
+
+- id: sigrank_mcp
+  canonical_name: SigRank MCP
+  type: tool
+  family: sigrank
+  role: On-device scanner and MCP tool
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-mcp
+    npm: https://www.npmjs.com/package/sigrank
+  description: >
+    On-device token scanner + MCP server. Yield cascade + live leaderboard
+    as MCP tools any agent can call. 23 tools, TUI, signed submit.
+  implementation_repo_id: sigrank_mcp
+  relationships:
+  - {predicate: depends_on, target_id: sigrank_cascade}
+  - {predicate: depends_on, target_id: tteop_spec}
+
+- id: sigrank_vscode
+  canonical_name: SigRank VS Code
+  type: tool
+  family: sigrank
+  role: VS Code extension
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-vscode
+  description: >
+    VS Code extension measuring AI coding operator token efficiency
+    (Yield/Υ) inline. Token counts only — never prompt content.
+  implementation_repo_id: sigrank_vscode
+  relationships:
+  - {predicate: measures, target_id: yield_metric}
+
+- id: sigrank_agent
+  canonical_name: SigRank Agent
+  type: tool
+  family: sigrank
+  role: Local telemetry agent
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: archived
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigrank-agent
+  description: >
+    Local telemetry agent — privacy-preserving CLI that scans AI platform
+    logs, computes the metric stack, and publishes signed snapshots.
+    Moved to archive 2026-07-06.
+  implementation_repo_id: sigrank_agent
+  relationships:
+  - {predicate: serves, target_id: sigrank}
+
+- id: sigarena
+  canonical_name: SigArena
+  type: product
+  family: sigrank
+  role: Satellite leaderboard site
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    website: https://sigarena.vercel.app
+    repo: https://github.com/SunrisesIllNeverSee/sigarena
+  description: >
+    AI User Leaderboard — SigRank's satellite site. Read-only leaderboard
+    that routes to signalaf.com for measurement and submission.
+  implementation_repo_id: sigarena
+  relationships:
+  - {predicate: satellite_of, target_id: sigrank}
+  - {predicate: routes_to, target_id: signalaf}
+
+- id: signa
+  canonical_name: signa
+  type: tool
+  family: sigrank
+  role: Interactive token-cascade coaching agent
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/signa
+  description: >
+    Interactive token-cascade agent. Reads AI coding session logs locally,
+    computes the cascade (Υ/SNR/Leverage/Velocity), builds a behavioral
+    taste profile, and coaches on token efficiency.
+  implementation_repo_id: signa
+  relationships:
+  - {predicate: computes, target_id: yield_metric}
+  - {predicate: serves, target_id: sigrank}
+
+- id: sigadmin_web
+  canonical_name: SigAdmin Web
+  type: product
+  family: sigrank
+  role: Admin dashboard
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/sigadmin-web
+  description: >
+    SigRank admin dashboard — CRM + sigadmin merged. Auth-gated.
+    admin.signalaf.com. NOT public.
+  implementation_repo_id: sigadmin_web
+  relationships:
+  - {predicate: administers, target_id: sigrank}
+  - {predicate: administers, target_id: signalaf}

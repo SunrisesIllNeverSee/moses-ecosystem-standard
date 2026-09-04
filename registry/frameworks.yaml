@@ -1,0 +1,126 @@
+# Machine-readable frameworks registry.
+# Contains REFERENCES to ecosystem frameworks, not copies.
+# Each entry points outward to the actual authority.
+---
+registry_version: 0.1.0-draft
+last_updated: '2026-09-04'
+standard_version: moses-ecosystem/0.1-draft
+total_frameworks: 5
+frameworks:
+
+- id: moses
+  name: MO§ES™
+  canonical_name: MO§ES™
+  aliases:
+  - mos2es
+  - MOSES
+  type: framework
+  role: Governance and enforcement architecture
+  family: moses
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  patent: 63/877,177
+  trademark: '99408355'
+  urls:
+    website: https://mos2es.com
+  description: >
+    Sovereign signal governance system created by Deric J. McHenry.
+    The enforcement architecture for Commitment Theory. Operationalizes
+    the Conservation Law of Commitment. Exactly ONE entity — never
+    duplicated. Canonical display: MO§ES™. Accepted prose: MO§ES.
+    Never render: MO§E§ or MO§E§™.
+  relationships:
+  - {predicate: operationalizes, target_id: commitment_theory}
+  - {predicate: enforces, target_id: conservation_law_of_commitment}
+  - {predicate: formalized_in, target_id: moses_framework}
+  - {predicate: owned_by, target_id: ello_cello_llc}
+
+- id: moses_framework
+  name: MO§ES Framework
+  canonical_name: MO§ES Framework
+  type: framework
+  role: Canonical ontology repository
+  family: moses
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  version: v0.1
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/moses-framework
+  description: >
+    Canonical framework repository for MO§ES™ — ontology, provenance,
+    claims, prior-art, and measurement infrastructure. The repo becomes
+    the canonical state. Machine-readable ontology from day one.
+    CC BY 4.0 public layer. Proprietary MO§ES™ core excluded.
+  relationships:
+  - {predicate: formalizes, target_id: moses}
+  - {predicate: governed_by, target_id: search_authority}
+
+- id: commitment_theory
+  name: Commitment Theory
+  canonical_name: Commitment Theory
+  aliases:
+  - CT
+  type: research
+  role: Research framework
+  family: commitment-theory
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  doi: 10.5281/zenodo.20031715
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/Commitment_Theory
+    doi: https://doi.org/10.5281/zenodo.20031715
+  description: >
+    34-paper research program built on the Conservation Law of Commitment.
+    AI governance grounded in a falsifiable, empirically tested conservation
+    law. CC-BY-4.0.
+  relationships:
+  - {predicate: contains, target_id: conservation_law_of_commitment}
+  - {predicate: operationalized_by, target_id: moses}
+
+- id: conservation_law_of_commitment
+  name: Conservation Law of Commitment
+  canonical_name: Conservation Law of Commitment
+  type: research
+  role: Falsifiable empirical claim
+  family: commitment-theory
+  authority_class: canonical_source
+  authority_owner: search_authority
+  status: active
+  doi: 10.5281/zenodo.20029607
+  patent: 63/877,177
+  urls:
+    doi: https://doi.org/10.5281/zenodo.20029607
+  description: >
+    A Conservation Law for Commitment in Language Under Transformative
+    Compression and Recursive Application — the foundational published law.
+    Falsifiable empirical claim that commitment is conserved under governed
+    transformation and decays under ungoverned transformation. CC-BY-4.0.
+  relationships:
+  - {predicate: part_of, target_id: commitment_theory}
+  - {predicate: enforced_by, target_id: moses}
+
+- id: kassa
+  name: KASSA
+  canonical_name: KASSA
+  aliases:
+  - K-Governed Voice Architecture
+  type: platform
+  role: K-Governed Voice Architecture
+  family: kassa
+  authority_class: product_implementation
+  authority_owner: search_authority
+  status: active
+  doi: 10.5281/zenodo.21070813
+  urls:
+    repo: https://github.com/SunrisesIllNeverSee/KASSA
+    doi: https://doi.org/10.5281/zenodo.21070813
+  description: >
+    K-Governed Voice Architecture. Commit state once, hash-lock it, let
+    downstream agents consume K read-only. Built on the Conservation Law
+    of Commitment. Publicly demonstrates MO§ES™ principles.
+  relationships:
+  - {predicate: built_on, target_id: conservation_law_of_commitment}
+  - {predicate: governed_by, target_id: moses}

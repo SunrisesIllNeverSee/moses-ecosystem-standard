@@ -1,0 +1,48 @@
+{
+  "standard": "moses-ecosystem",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "last_updated": "2026-09-04",
+  "owner": "Ello Cello LLC",
+  "author": "Deric J. McHenry",
+  "license": "CC-BY-4.0",
+  "canonical_url": "https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard",
+  "authority_source": "search-authority",
+  "sections": [
+    "Purpose and Scope",
+    "Definition of MO§ES",
+    "Ecosystem Architecture",
+    "Authority Architecture",
+    "Component Taxonomy",
+    "Product Families",
+    "Research/Framework Families",
+    "Standards and Protocols",
+    "MO§ES Framework Relationship",
+    "SigRank Ecosystem Relationship",
+    "TTEOP Relationship",
+    "Public Sites and Surfaces",
+    "Canonical Terminology",
+    "Data and Privacy Boundaries",
+    "Versioning",
+    "Conformance and Reference Rules",
+    "Canonical URLs and Identifiers",
+    "Machine-Readable Component Registry",
+    "Search Authority Provenance",
+    "Change History"
+  ],
+  "registries": [
+    "registry/components.yaml",
+    "registry/standards.yaml",
+    "registry/protocols.yaml",
+    "registry/frameworks.yaml",
+    "registry/products.yaml",
+    "registry/sites.yaml"
+  ],
+  "references": [
+    "references/search-authority.yaml",
+    "references/moses-framework.yaml",
+    "references/tteop.yaml",
+    "references/sigrank-ecosystem-standard.yaml",
+    "references/external-sources.yaml"
+  ]
+}

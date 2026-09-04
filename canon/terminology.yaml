@@ -1,0 +1,106 @@
+---
+# MO§ES Ecosystem Standard — Canonical Terminology
+#
+# Projected from Search Authority canon/shared/terminology.yaml.
+# This is a public projection — the authoritative source is Search Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+
+current_terms:
+  - term: Commitment Theory
+    abbreviation: CT
+    status: source_supported
+    source_refs: [ct-readme]
+
+  - term: Conservation Law of Commitment
+    status: source_supported
+    source_refs: [ct-readme, ct-paper0]
+
+  - term: "MO\xA7ES\u2122"
+    accepted_plain_aliases: ["MO\xA7ES", mos2es, MOSES]
+    status: owner_approved
+    source_refs: [moses-site-data, owner-entity-graph-2026-08-14]
+
+  - term: SigRank
+    status: owner_approved
+    source_refs: [sigrank-readme, owner-entity-graph-2026-08-14]
+
+  - term: SigRank Index
+    status: owner_approved
+    source_refs: [sigrank-llms, owner-entity-graph-2026-08-14]
+
+  - term: KASSA
+    accepted_plain_aliases: [K-Governed Voice Architecture]
+    status: source_supported
+    source_refs: [kassa-readme]
+
+  - term: Signomy
+    status: source_supported
+    source_refs: [ct-readme, signomy-site]
+
+  - term: CIVITAE
+    status: source_supported
+    source_refs: [ct-readme, signomy-site]
+
+  - term: Ello Cello LLC
+    status: owner_approved
+    source_refs: [ct-readme, moses-site-data, owner-entity-graph-2026-08-14]
+
+  - term: Deric J. McHenry
+    status: owner_approved
+    source_refs: [ct-readme, owner-entity-graph-2026-08-14]
+
+  - term: Upsilon
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28]
+
+  - term: "Yield (\u03A5)"
+    accepted_plain_aliases: [Yield, "Yield metric"]
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - term: SignalAF
+    status: owner_approved
+    source_refs: [upsilon-architecture-directive-2026-08-28, sigrank-llms]
+
+  - term: TTEOP
+    accepted_plain_aliases: ["Token Telemetry Evaluation Operator Protocol", otep-spec, tteop-spec]
+    status: owner_approved
+    source_refs: [tteop-spec-readme, tteop-authority-architecture-directive-2026-09-02]
+
+stale_terms:
+  - term: Commitment Conservation Theory
+    replacement: Commitment Theory
+    reason: Superseded framework name; conservation remains at the law level.
+    source_refs: [ct-readme]
+
+  - term: CCT
+    replacement: CT
+    reason: Superseded framework abbreviation.
+    source_refs: [ct-readme]
+
+  - term: "MO\xA7E\xA7"
+    replacement: "MO\xA7ES\u2122"
+    reason: Noncanonical double-section-sign rendering found in older materials.
+    source_refs: [moses-site-data]
+
+  - term: SigRank Standard
+    replacement: TTEOP
+    reason: >-
+      The sigrank/0.1-draft measurement specification was renamed to TTEOP
+      and is now maintained in the otep-spec repository. sigrank-standard is
+      retained only as a legacy predecessor for backward compatibility.
+    source_refs: [tteop-spec-readme, tteop-authority-architecture-directive-2026-09-02]
+
+  - term: OTEP
+    replacement: TTEOP
+    reason: >-
+      The protocol was renamed from "OTEP" to "TTEOP" on 2026-08-30 due to
+      collision with OpenTelemetry Enhancement Proposals. The GitHub repo
+      name otep-spec is retained for URL stability; the protocol name is
+      TTEOP.
+    source_refs: [tteop-spec-readme]

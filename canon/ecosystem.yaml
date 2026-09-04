@@ -1,0 +1,63 @@
+---
+# MO§ES Ecosystem Standard — Ecosystem-Level Canonical Information
+#
+# This is a governed public projection of Search Authority's master canon.
+# It does not independently invent canonical truth. Every claim traces to
+# Search Authority.
+#
+# Governance rules:
+#   - Exactly ONE MO§ES entity. Never duplicate it.
+#   - Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES.
+#   - Never render: MO§E§ or MO§E§™.
+#   - Do NOT collapse Signomy and CIVITAE.
+#   - The harness may measure authority, but it cannot manufacture authority.
+#   - Automated systems may not promote claims into owner-approved truth.
+
+standard_version: "1.0"
+
+ecosystem_identity:
+  canonical_name: "MO\xA7ES\u2122"
+  accepted_prose: "MO\xA7ES"
+  aliases: [mos2es, MOSES]
+  description: >-
+    Sovereign signal governance system and enforcement architecture for
+    Commitment Theory. Governs Signomy and CIVITAE.
+  canonical_url: https://mos2es.com
+  authority: search_authority
+
+ecosystem_families:
+  - family: governance
+    description: Enforcement architecture and constitutional governance.
+    entities: [moses, commitment_theory, conservation_law_of_commitment]
+  - family: measurement
+    description: Token telemetry measurement, benchmarking, and proof surfaces.
+    entities: [tteop, sigrank, sigrank_index, upsilon, yield_metric, signalaf]
+  - family: platforms
+    description: Governed platforms and constitutional AI ecosystems.
+    entities: [signomy, civitae]
+  - family: demonstration
+    description: Public demonstration architectures.
+    entities: [kassa]
+  - family: ownership
+    description: Persons and organizations holding canonical authority.
+    entities: [deric_j_mchenry, ello_cello_llc]
+
+authority_source:
+  name: Search Authority
+  role: master_canon
+  description: >-
+    Search Authority is the canonical internal authority. This standard is a
+    governed public projection of that canon. Disputed claims in Search
+    Authority remain disputed here — this standard does not resolve them.
+  projection_status: public_projection
+
+governance_rules:
+  - rule: "Exactly ONE MO§ES entity. Never duplicate it."
+  - rule: "Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES."
+  - rule: "Never render: MO§E§ or MO§E§™."
+  - rule: "Do NOT collapse Signomy and CIVITAE."
+  - rule: "Archetype = shape. Class = scale/qualification. Rank = field position."
+  - rule: "SigRank evaluates AI operators, not AI models."
+  - rule: "The harness may measure authority, but it cannot manufacture authority."
+  - rule: "Automated systems may not promote claims into owner-approved truth."
+  - rule: "This standard does not independently invent canonical truth."
