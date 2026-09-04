@@ -163,7 +163,25 @@
       "source_refs": [
         "sigrank-readme",
         "sigrank-llms"
-      ]
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "medium"
+      },
+      "basis": {
+        "summary": "SigRank is defined as an operator evaluation system that measures AI operators (not models) using telemetry primitives (input, output, cache_read, cache_write) and derived metrics (Yield, Leverage, Velocity, SNR).",
+        "source_system": "none"
+      },
+      "limitations": [
+        "SigRank evaluates operators, not models \u2014 this is a design decision, not a limitation.",
+        "Metric definitions are canonical but empirical validation is ongoing."
+      ],
+      "falsification": {
+        "falsifiable": true,
+        "criteria": [
+          "If SigRank metrics do not distinguish operators better than chance, the measurement framework is falsified."
+        ]
+      }
     },
     {
       "id": "SR-CONTRAST-001",

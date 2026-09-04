@@ -41,8 +41,8 @@
       "confidence_level": "high"
     },
     {
-      "id": "SIGRANK-DEF-001",
-      "type": "claim",
+      "id": "SR-DEF-001",
+      "type": "unknown",
       "evidence_level": "theoretical",
       "confidence_level": "medium"
     },
@@ -199,13 +199,13 @@
       "notes": "The KASSA boundary depends on MOSES being defined."
     },
     {
-      "from": "SIGRANK-DEF-001",
+      "from": "SR-DEF-001",
       "to": "CL-PROBLEM-001",
       "type": "depends_on",
       "notes": "SigRank measurement depends on the Conservation Law being the theoretical foundation."
     },
     {
-      "from": "SIGRANK-DEF-001",
+      "from": "SR-DEF-001",
       "to": "MO-PROBLEM-001",
       "type": "supports",
       "notes": "SigRank operationalizes the MOSES governance problem."
@@ -354,7 +354,7 @@
       "planned": true
     },
     {
-      "from": "SIGRANK-DEF-001",
+      "from": "SR-DEF-001",
       "to": "MOS-HB-SIG-001",
       "type": "described_by",
       "notes": "SigRank definition will be described by handbook entry MOS-HB-SIG-001.",

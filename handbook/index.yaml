@@ -43,7 +43,7 @@ entries:
     status: published
     file: measurement/sigrank-measurement.md
     authority_source:
-      - SIGRANK-DEF-001
+      - SR-DEF-001
     references:
       - https://github.com/SunrisesIllNeverSee/sigrank-standard
     related_entities:

@@ -1,7 +1,7 @@
 # SigRank Measurement System
 
 > **Handbook ID**: MOS-HB-SIG-001
-> **Authority sources**: SIGRANK-DEF-001
+> **Authority sources**: SR-DEF-001
 > **Status**: published
 
 ## What it is
