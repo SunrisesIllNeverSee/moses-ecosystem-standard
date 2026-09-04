@@ -1,0 +1,120 @@
+# Epistemic Architecture Integration
+#
+# How the MO§ES Ecosystem Standard connects to the epistemic architecture
+# (claims, evidence, falsification, dependency graph).
+#
+# The standard does NOT own epistemic records. It references them.
+#
+# Schema version: 1
+# Created: 2026-09-04
+# Phase: 6
+
+schema_version: 1
+
+# ---------------------------------------------------------------------------
+# Authority map for epistemic artifacts
+# ---------------------------------------------------------------------------
+# Where each type of epistemic record lives.
+
+epistemic_authority:
+
+  claims:
+    canonical_location: search-authority/canonical/claims.yaml
+    epistemic_extension: search-authority/canonical/epistemic-claims.yaml
+    framework_source: moses-framework/claims/claims-registry.yaml
+    research_source: commitment-conservation/claims/CONSERVATION_CLAIMS.yaml
+    authority_class: canonical_authority
+    notes: >-
+      Search Authority is canonical. Framework and research repos are sources.
+      Epistemic extensions add depth without modifying canonical claims.
+
+  evidence:
+    canonical_location: search-authority/canon/shared/evidence.yaml
+    epistemic_extension: search-authority/canonical/epistemic-evidence.yaml
+    research_source: commitment-conservation/claims/EVIDENCE_MAP.yaml
+    authority_class: canonical_authority
+    notes: >-
+      Evidence records map sources to claims. Epistemic extensions add
+      direction, confidence, scope, and limitations.
+
+  falsification:
+    canonical_location: search-authority/canonical/epistemic-claims.yaml
+    research_source: commitment-conservation/claims/FALSIFICATION_REGISTRY.yaml
+    authority_class: research_source
+    notes: >-
+      Falsification records originate in research repos. Search Authority
+      references them via epistemic extensions.
+
+  dependency_graph:
+    canonical_relationships: search-authority/canonical/claim-relationships.yaml
+    generated_projection: moses-integration/framework/exports/graph.json
+    authority_class: canonical_authority
+    notes: >-
+      Canonical relationships live in Search Authority. The graph.json
+      in moses-integration is a generated projection, NOT canonical.
+
+  handbook:
+    location: moses-ecosystem-standard/handbook/
+    authority_class: public_projection
+    notes: >-
+      The handbook explains canon. It does not create canon.
+      Every entry traces to Search Authority or a research repository.
+
+# ---------------------------------------------------------------------------
+# What the standard exposes
+# ---------------------------------------------------------------------------
+# The standard references these epistemic artifacts without duplicating them.
+
+exposed_references:
+
+  - name: Conservation Law claims
+    type: claim_set
+    source: commitment-conservation/claims/CONSERVATION_CLAIMS.yaml
+    sa_binding: search-authority/canonical/epistemic-claims.yaml
+    handbook_entry: MOS-HB-CT-001
+
+  - name: Conservation Law falsification
+    type: falsification_registry
+    source: commitment-conservation/claims/FALSIFICATION_REGISTRY.yaml
+    sa_binding: search-authority/canonical/epistemic-claims.yaml
+    handbook_entry: MOS-HB-CT-001
+
+  - name: Conservation Law evidence
+    type: evidence_map
+    source: commitment-conservation/claims/EVIDENCE_MAP.yaml
+    sa_binding: search-authority/canonical/epistemic-evidence.yaml
+    handbook_entry: MOS-HB-CT-001
+
+  - name: Conservation Law dependencies
+    type: dependency_graph
+    source: commitment-conservation/claims/CLAIM_DEPENDENCIES.yaml
+    sa_binding: search-authority/canonical/claim-relationships.yaml
+    handbook_entry: MOS-HB-CT-001
+
+  - name: MO§ES Framework claims
+    type: claim_set
+    source: moses-framework/claims/claims-registry.yaml
+    sa_binding: search-authority/canonical/epistemic-claims.yaml
+    handbook_entry: MOS-HB-FWK-001
+
+  - name: SigRank measurement claims
+    type: claim_set
+    source: search-authority/canonical/epistemic-claims.yaml
+    sa_binding: search-authority/canon/sigrank/canon.yaml
+    handbook_entry: MOS-HB-SIG-001
+
+  - name: Claim dependency graph
+    type: graph_projection
+    source: moses-integration/framework/exports/graph.json
+    sa_binding: search-authority/canonical/claim-relationships.yaml
+    handbook_entry: N/A
+
+# ---------------------------------------------------------------------------
+# Integration rules
+# ---------------------------------------------------------------------------
+# 1. The standard NEVER duplicates epistemic records. It references them.
+# 2. The standard NEVER promotes a claim to canonical status.
+# 3. The standard NEVER collapses epistemic dimensions.
+# 4. The handbook explains; it does not create canon.
+# 5. graph.json is a projection; it is NOT canonical.
+# 6. If the standard and Search Authority disagree, SA wins.

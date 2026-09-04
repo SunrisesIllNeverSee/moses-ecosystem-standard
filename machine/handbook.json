@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "generated_from": "moses-ecosystem-standard/handbook/index.yaml",
+  "total_entries": 4,
+  "entries": [
+    {
+      "id": "MOS-HB-CT-001",
+      "title": "Conservation of Commitment",
+      "status": "published",
+      "file": "foundations/conservation-of-commitment.md",
+      "authority_source": [
+        "CL-DEF-001",
+        "CT-001"
+      ],
+      "references": [
+        "DOI:10.5281/zenodo.20029607",
+        "DOI:10.5281/zenodo.20031715"
+      ],
+      "related_entities": [
+        "conservation_law_of_commitment",
+        "commitment_theory"
+      ]
+    },
+    {
+      "id": "MOS-HB-GOV-001",
+      "title": "MO\u00a7ES Governance Architecture",
+      "status": "published",
+      "file": "governance/moses-governance.md",
+      "authority_source": [
+        "MO-DEF-001",
+        "MO-PROBLEM-001"
+      ],
+      "references": [
+        "DOI:10.5281/zenodo.20029607"
+      ],
+      "related_entities": [
+        "moses"
+      ]
+    },
+    {
+      "id": "MOS-HB-SIG-001",
+      "title": "SigRank Measurement System",
+      "status": "published",
+      "file": "measurement/sigrank-measurement.md",
+      "authority_source": [
+        "SIGRANK-DEF-001"
+      ],
+      "references": [
+        "https://github.com/SunrisesIllNeverSee/sigrank-standard"
+      ],
+      "related_entities": [
+        "sigrank",
+        "tteop"
+      ]
+    },
+    {
+      "id": "MOS-HB-FWK-001",
+      "title": "MO\u00a7ES Framework Overview",
+      "status": "published",
+      "file": "framework/moses-framework-overview.md",
+      "authority_source": [
+        "MO-DEF-001"
+      ],
+      "references": [
+        "https://github.com/SunrisesIllNeverSee/moses-framework"
+      ],
+      "related_entities": [
+        "moses",
+        "commitment_theory"
+      ]
+    }
+  ]
+}

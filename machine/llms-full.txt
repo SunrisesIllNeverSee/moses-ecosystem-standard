@@ -1,0 +1,1111 @@
+# MO§ES Ecosystem — Full Corpus
+
+> Generated from approved public material only.
+> Canonical source: Search Authority.
+
+---
+# MO§ES Ecosystem Standard
+
+# MO§ES Ecosystem Standard
+
+## Specification v0.1-draft
+
+**Standard name:** MO§ES Ecosystem Standard
+**Version string:** `moses-ecosystem/0.1-draft`
+**Status:** Draft — not yet a frozen standard
+**Owner:** Deric J. McHenry / Ello Cello LLC
+**Canonical display:** MO§ES™. Accepted prose: MO§ES. Aliases: mos2es, MOSES. Never render: MO§E§.
+
+- **Repository:** https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
+- **Authority source:** Search Authority (private, governed master canon)
+- **MO§ES™ website:** https://mos2es.com
+- **Trademark:** MO§ES™ is a service mark of Ello Cello LLC (TM 99408355)
+- **License:** CC BY 4.0 (see [LICENSE](LICENSE))
+
+---
+
+## What this standard is
+
+The MO§ES Ecosystem Standard is the **canonical public architecture and
+reference standard** for the entire MO§ES ecosystem. It is a governed
+public projection of the Search Authority master canon.
+
+It is a **canonical information package**, not a product monorepo. It
+contains references to ecosystem components, not copies of them.
+
+### What it contains
+
+- Canonical ecosystem information and references
+- Structured canon projections (entity identity, relationships, terminology)
+- Machine-readable component registries
+- Architecture documents
+- References to external authorities
+
+### What it does not contain
+
+- Product source code (that lives in product repos)
+- TTEOP protocol semantics (that lives in the TTEOP specification)
+- MO§ES Framework ontology (that lives in the Framework repository)
+- Search Authority internal canon structure (that lives in Search Authority)
+
+---
+
+## Information sources and authority
+
+This standard aggregates information from multiple sources, each with
+different authority:
+
+```
+                    SEARCH AUTHORITY
+                 approved canonical truth
+                         │
+                         ▼
+               MO§ES ECOSYSTEM STANDARD
+                public canonical overview
+                   ▲        ▲        ▲
+                   │        │        │
+             formal refs   specs   implementation identity
+                   │        │        │
+         MO§ES Framework  TTEOP   Ello Control
+```
+
+### Search Authority supplies
+
+```
+canonical names
+approved descriptions
+canonical relationships
+approved public claims
+terminology
+entity identity
+authority assignments
+```
+
+### MO§ES Framework supplies
+
+```
+formal framework references
+claim IDs
+ontology concepts
+framework version
+formal status
+```
+
+The standard **references** those. It does not absorb ownership of them.
+
+### TTEOP supplies
+
+```
+protocol identity
+protocol version
+protocol role
+canonical protocol URL
+```
+
+The standard says: "TTEOP is the measurement protocol used here." It does
+not copy the metric specification.
+
+### Ello Control supplies
+
+```
+repo_id
+current repo/location
+lifecycle
+implementation relationship
+deployment mapping
+```
+
+This is operational identity, not canonical truth. Ello Control knows
+where things live; it does not define what they mean.
+
+---
+
+## Table of Contents
+
+1. [Purpose and Scope](#1-purpose-and-scope)
+2. [Definition of MO§ES](#2-definition-of-moses)
+3. [Ecosystem Architecture](#3-ecosystem-architecture)
+4. [Authority Architecture](#4-authority-architecture)
+5. [Component Taxonomy](#5-component-taxonomy)
+6. [Product Families](#6-product-families)
+7. [Research/Framework Families](#7-researchframework-families)
+8. [Standards and Protocols](#8-standards-and-protocols)
+9. [MO§ES Framework Relationship](#9-moses-framework-relationship)
+10. [SigRank Ecosystem Relationship](#10-sigrank-ecosystem-relationship)
+11. [TTEOP Relationship](#11-tteop-relationship)
+12. [Public Sites and Surfaces](#12-public-sites-and-surfaces)
+13. [Canonical Terminology](#13-canonical-terminology)
+14. [Data and Privacy Boundaries](#14-data-and-privacy-boundaries)
+15. [Versioning](#15-versioning)
+16. [Conformance and Reference Rules](#16-conformance-and-reference-rules)
+17. [Canonical URLs and Identifiers](#17-canonical-urls-and-identifiers)
+18. [Machine-Readable Component Registry](#18-machine-readable-component-registry)
+19. [Search Authority Provenance](#19-search-authority-provenance)
+20. [Change History](#20-change-history)
+
+---
+
+## 1. Purpose and Scope
+
+### 1.1 Purpose
+
+The MO§ES Ecosystem Standard is the canonical public architecture and
+reference standard for the entire MO§ES ecosystem. Its purpose is to
+answer:
+
+> What is the MO§ES ecosystem, what components belong to it, what roles
+> do they have, how do they relate, and which authority governs each type
+> of information?
+
+### 1.2 Scope
+
+This standard covers:
+
+- The definition and identity of MO§ES™
+- The ecosystem architecture and component taxonomy
+- Authority relationships between ecosystem components
+- Product families and their roles
+- Research and framework families
+- Standards and protocols used within the ecosystem
+- Public sites, surfaces, and identifiers
+- Canonical terminology
+- Data and privacy boundaries
+- Versioning and conformance rules
+
+### 1.3 Out of scope
+
+This standard does **not**:
+
+- Define the MO§ES Framework's formal ontology, methodology, claims, or
+  laws (that is the [MO§ES Framework](references/moses-framework.yaml))
+- Define TTEOP protocol semantics (that is [TTEOP](references/tteop.yaml))
+- Define Search Authority's internal canon structure (that is
+  [Search Authority](references/search-authority.yaml))
+- Define product-level implementation details (that is each product's role)
+- Contain product source code or local documentation
+
+### 1.4 Core invariant
+
+Every significant MO§ES public surface should eventually be able to answer:
+
+```
+What am I?
+What family am I part of?
+What is my role?
+What standard/framework/protocol governs me?
+Where is the canonical ecosystem reference?
+What Search Authority-backed identity does this resolve to?
+```
+
+The objective is that no webpage, repository, MCP, product, article, or AI
+agent has to independently reconstruct the MO§ES ecosystem.
+
+---
+
+## 2. Definition of MO§ES
+
+### 2.1 Identity
+
+MO§ES™ is a sovereign signal governance system created by Deric J.
+McHenry. It is the enforcement architecture for Commitment Theory and
+operationalizes the Conservation Law of Commitment.
+
+- **Canonical display:** MO§ES™
+- **Accepted prose:** MO§ES
+- **Aliases:** mos2es, MOSES
+- **Never render:** MO§E§ or MO§E§™
+- **Trademark:** 99408355 (IC 042, filed 2025-09-23)
+- **Patent:** 63/877,177 (provisional, filed 2025-09-07)
+- **Service mark of:** Ello Cello LLC
+- **Website:** https://mos2es.com
+
+### 2.2 What MO§ES™ is
+
+MO§ES™ is the governance and enforcement architecture. It governs
+platforms, products, and research within the ecosystem. It is not a
+product surface itself.
+
+### 2.3 What MO§ES™ is not
+
+- MO§ES™ is not a product surface (SignalAF, SigRank, Upsilon are products)
+- MO§ES™ is not a measurement protocol (TTEOP is the protocol)
+- MO§ES™ is not a public site (mos2es.com is the site)
+- MO§ES™ is not interchangeable with any single product it governs
+
+### 2.4 Disputed definitions
+
+The interpretive definition of MO§ES™ (e.g. "semantic meaning at
+execution") remains under owner review and is **not** canonical. This
+standard records the identity, provenance, and governance role of
+MO§ES™ without resolving disputed definitional wording. See Search
+Authority canon record MO-DEF-001.
+
+---
+
+## 3. Ecosystem Architecture
+
+> See [architecture/ecosystem-architecture.md](architecture/ecosystem-architecture.md)
+> for the full architecture document.
+
+### 3.1 Target architecture
+
+```
+                    SEARCH AUTHORITY
+                 approved canonical truth
+                         │
+                         ▼
+               MO§ES ECOSYSTEM STANDARD
+                public canonical overview
+                   ▲        ▲        ▲
+                   │        │        │
+             formal refs   specs   implementation identity
+                   │        │        │
+         MO§ES Framework  TTEOP   Ello Control
+```
+
+### 3.2 Architecture principles
+
+1. **Single authority source.** Search Authority is the canonical
+   internal authority. This standard is a governed public projection.
+2. **Separation of concerns.** Framework, standards, protocols, and
+   products are distinct layers with distinct owners.
+3. **No independent truth.** No ecosystem component may independently
+   invent canonical truth. All canonical claims trace to Search Authority.
+4. **Protocol independence.** TTEOP is independently authoritative for
+   its protocol semantics. Ecosystem standards may reference but not
+   redefine it.
+5. **One MO§ES entity.** There is exactly one MO§ES™ entity. It may
+   appear in multiple graph positions but is never duplicated.
+
+---
+
+## 4. Authority Architecture
+
+> See [architecture/authority-architecture.md](architecture/authority-architecture.md)
+> for the full authority document.
+> See [canon/authority-map.yaml](canon/authority-map.yaml) for the
+> machine-readable authority map.
+
+### 4.1 Authority classes
+
+| Class | Owner | Scope |
+|-------|-------|-------|
+| `master_canon` | Search Authority | All canonical truth |
+| `protocol_specification` | TTEOP (otep-spec repo) | Telemetry protocol semantics |
+| `canonical_source` | MO§ES Framework | Ontology, methodology, claims, laws |
+| `product_implementation` | SigRank / SignalAF / Upsilon | Product behavior and extensions |
+| `transport` | tteop-mcp | MCP transport over TTEOP |
+| `legacy_compatibility_source` | sigrank-standard | Legacy predecessor, retained for compatibility |
+| `public_projection` | This standard, mos2es.com | Public ecosystem reference |
+
+### 4.2 Authority rules
+
+1. **Search Authority** is the sole master canon owner.
+2. **TTEOP** is the sole protocol specification authority for token
+   telemetry measurement.
+3. **MO§ES Framework** is the canonical source for ontology, methodology,
+   claims, and laws.
+4. **Products** own their product behavior and extensions but may not
+   redefine protocol semantics, framework claims, or ecosystem authority.
+5. **This standard** is a public projection. It does not independently
+   invent canonical truth.
+
+---
+
+## 5. Component Taxonomy
+
+> See [registry/components.yaml](registry/components.yaml) for the
+> machine-readable component registry.
+
+### 5.1 Component types
+
+| Type | Description | Examples |
+|------|-------------|----------|
+| `framework` | Formal ontology, methodology, claims, laws | MO§ES Framework |
+| `standard` | Public architecture/reference standard | This standard, TTEOP |
+| `protocol` | Vendor-neutral interoperability protocol | TTEOP |
+| `product` | Commercial or public product | SignalAF, SigRank, Upsilon |
+| `platform` | Governed platform surface | Signomy, CIVITAE |
+| `transport` | MCP transport layer | tteop-mcp, sigrank-mcp |
+| `tool` | Companion tool or extension | sigrank-vscode, sigrank-agent |
+| `research` | Research program or dataset | Commitment Theory, SigRank Index |
+| `site` | Public website | mos2es.com, signalaf.com |
+| `legacy` | Superseded predecessor | sigrank-standard |
+| `governance` | Governance implementation | moses-governance |
+| `infrastructure` | Shared infrastructure | ello-repo-control, search-authority |
+
+### 5.2 Role classification
+
+Each component has exactly one primary role and may have secondary roles:
+
+- **authority** — owns canonical truth for its domain
+- **implementation** — implements canonical truth
+- **transport** — provides transport/access without defining semantics
+- **projection** — public projection of internal canon
+- **reference** — reference implementation or fixture
+- **evidence_source** — provides evidence for canonical claims
+- **legacy_source** — superseded, retained for compatibility
+
+---
+
+## 6. Product Families
+
+> See [registry/products.yaml](registry/products.yaml) for the
+> machine-readable product registry.
+
+### 6.1 SigRank family
+
+The SigRank family is the AI operator evaluation and measurement ecosystem.
+
+| Component | Role | Description |
+|-----------|------|-------------|
+| SignalAF | product / distribution surface | Public brand and distribution surface |
+| SigRank | product / leaderboard | Public leaderboard and proof surface |
+| Upsilon | product / measurement engine | Commercial measurement engine |
+| Yield (Υ) | metric | Flagship metric: Υ = (R × O) / I² |
+
+### 6.2 Product boundaries
+
+- SigRank evaluates AI **operators**, not AI models
+- SigRank is the public leaderboard/proof surface, not the measurement engine (that is Upsilon)
+- Upsilon is the measurement engine, not the leaderboard (that is SigRank)
+- Upsilon is NOT the same as Yield. Yield is a metric inside Upsilon
+- SignalAF is the distribution surface, not the governance authority
+
+---
+
+## 7. Research/Framework Families
+
+> See [registry/frameworks.yaml](registry/frameworks.yaml) for the
+> machine-readable framework registry.
+
+### 7.1 MO§ES Framework
+
+The MO§ES Framework is the formal ontology, methodology, claims, laws,
+epistemic states, and framework structure.
+
+- **Reference:** [references/moses-framework.yaml](references/moses-framework.yaml)
+- **Repository:** https://github.com/SunrisesIllNeverSee/moses-framework
+
+### 7.2 Commitment Theory
+
+Research framework containing the Conservation Law of Commitment.
+
+- **Repository:** https://github.com/SunrisesIllNeverSee/Commitment_Theory
+- **DOI:** 10.5281/zenodo.20031715 (V.1), 10.5281/zenodo.21069704 (V2)
+
+### 7.3 Conservation Law of Commitment
+
+Falsifiable empirical claim that commitment is conserved under governed
+transformation and decays under ungoverned transformation.
+
+- **DOI:** 10.5281/zenodo.20029607 (V.05)
+
+### 7.4 KASSA
+
+K-Governed Voice Architecture that publicly demonstrates MO§ES™ principles.
+
+### 7.5 Signomy and CIVITAE
+
+Independently resolvable platforms governed by MO§ES™. Must not be collapsed.
+
+---
+
+## 8. Standards and Protocols
+
+> See [architecture/standards-and-protocols.md](architecture/standards-and-protocols.md)
+> for the full document.
+> See [registry/standards.yaml](registry/standards.yaml) and
+> [registry/protocols.yaml](registry/protocols.yaml) for machine-readable
+> registries.
+
+### 8.1 MO§ES Ecosystem Standard (this document)
+
+- **Version:** `moses-ecosystem/0.1-draft`
+- **Role:** Canonical public ecosystem architecture and reference
+- **Authority:** Governed projection of Search Authority
+
+### 8.2 TTEOP
+
+- **Protocol version:** `tteop/0.1-draft`
+- **Reference:** [references/tteop.yaml](references/tteop.yaml)
+- **Role:** Sole interoperability protocol authority for token telemetry
+- **Legacy alias:** `sigrank/0.1-draft` (resolves to `tteop/0.1-draft`)
+
+### 8.3 sigrank-standard (legacy)
+
+- **Status:** LEGACY PREDECESSOR — superseded by TTEOP
+- **Role:** Compatibility and migration evidence only
+
+---
+
+## 9. MO§ES Framework Relationship
+
+```
+MO§ES Ecosystem Standard
+= ecosystem architecture, component roles, relationships, standards,
+  products, public reference
+
+MO§ES Framework
+= formal ontology, methodology, claims, laws, epistemic states,
+  and framework structure
+```
+
+Neither replaces the other. The standard references the framework for
+definitional content but does not redefine or re-interpret it.
+
+- **Reference:** [references/moses-framework.yaml](references/moses-framework.yaml)
+
+---
+
+## 10. SigRank Ecosystem Relationship
+
+```
+MO§ES Ecosystem Standard
+= whole ecosystem
+
+SigRank Ecosystem Standard
+= one ecosystem/family within MO§ES
+```
+
+The SigRank ecosystem is one family within the broader MO§ES ecosystem.
+A future SigRank Ecosystem Standard should reference this standard as its
+broader ecosystem context.
+
+- **Reference:** [references/sigrank-ecosystem-standard.yaml](references/sigrank-ecosystem-standard.yaml)
+
+---
+
+## 11. TTEOP Relationship
+
+```
+MO§ES Ecosystem Standard
+= ecosystem architecture
+
+TTEOP
+= vendor-neutral measurement interoperability protocol
+```
+
+TTEOP is independently authoritative for its protocol semantics. This
+standard may reference TTEOP but may not redefine it.
+
+### Authority chain for measurement
+
+```
+TTEOP (protocol specification)
+  → tteop-spec (canonical executable/reference semantics)
+    → @sigrank/cascade (SigRank product facade)
+      → sigrank-mcp (product tooling)
+```
+
+- **Reference:** [references/tteop.yaml](references/tteop.yaml)
+
+---
+
+## 12. Public Sites and Surfaces
+
+> See [architecture/public-surfaces.md](architecture/public-surfaces.md)
+> for the full document.
+> See [registry/sites.yaml](registry/sites.yaml) for the machine-readable
+> site registry.
+
+| Site | URL | Role |
+|------|-----|------|
+| MO§ES™ website | https://mos2es.com | Public site for MO§ES™ |
+| SignalAF | https://signalaf.com | Public brand and distribution surface |
+| Signomy | https://signomy.xyz | Platform governed by MO§ES™ |
+| Upsilon | https://mos2es.org | Commercial measurement engine |
+| This standard | https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard | Public ecosystem reference |
+
+---
+
+## 13. Canonical Terminology
+
+> See [canon/terminology.yaml](canon/terminology.yaml) for the
+> machine-readable terminology file.
+
+### 13.1 Current terms
+
+| Term | Status | Notes |
+|------|--------|-------|
+| MO§ES™ | owner_approved | Canonical display. Never MO§E§. |
+| Commitment Theory | source_supported | Abbreviation: CT |
+| Conservation Law of Commitment | source_supported | Falsifiable empirical claim |
+| SigRank | owner_approved | Evaluates AI operators, not models |
+| SignalAF | owner_approved | Public brand/distribution surface |
+| Upsilon | owner_approved | Measurement engine (not the leaderboard) |
+| Yield (Υ) | owner_approved | Metric inside Upsilon |
+| TTEOP | owner_approved | Token Telemetry Evaluation Operator Protocol |
+| KASSA | source_supported | K-Governed Voice Architecture |
+| Signomy | source_supported | Platform governed by MO§ES™ |
+| CIVITAE | source_supported | Constitutional AI ecosystem governed by MO§ES™ |
+
+### 13.2 Display aliases
+
+| Canonical (TTEOP) | Display alias (SigRank) | Status |
+|--------------------|------------------------|--------|
+| output_fraction | SNR | SigRank display alias, not independent metric |
+| log_leverage | 10xDEV | SigRank display alias, not independent metric |
+
+---
+
+## 14. Data and Privacy Boundaries
+
+### 14.1 Telemetry primitives
+
+TTEOP defines four non-negative integer telemetry primitives:
+
+- `input` (I) — fresh input tokens
+- `output` (O) — output tokens
+- `cache_write` (W) — cache creation/write tokens
+- `cache_read` (R) — cache read tokens
+
+### 14.2 Privacy requirements
+
+- TTEOP telemetry must never contain prompt text, response text, source
+  code, repository contents, keystrokes, screen content, secrets, or
+  direct real-world identity.
+- Privacy claims must distinguish content-free token telemetry from zero
+  metadata risk.
+
+### 14.3 Content independence
+
+Telemetry is content-independent. The four primitives are token counts,
+not content. No ecosystem component may introduce content-dependent
+telemetry as a TTEOP primitive.
+
+---
+
+## 15. Versioning
+
+### 15.1 Standard version
+
+This standard uses the version string `moses-ecosystem/0.1-draft`.
+See [VERSION.yaml](VERSION.yaml) for the current version metadata.
+
+### 15.2 Versioning policy
+
+- Major version bumps indicate breaking changes to the ecosystem
+  architecture or authority structure.
+- Minor version bumps indicate additive changes (new components, new
+  relationships).
+- Draft versions are not frozen and may change without notice.
+- Frozen versions are tagged and receive a DOI.
+
+### 15.3 Current pinned versions
+
+| Component | Dependency | Version |
+|-----------|------------|---------|
+| @sigrank/cascade | tteop-spec | 0.1.5-draft (exact) |
+| sigrank-mcp | @sigrank/cascade | 0.2.1 (exact) |
+| sigrank-mcp | tteop-spec | 0.1.5-draft (exact) |
+| tteop-mcp | tteop-spec | 0.1.5-draft (exact) |
+
+---
+
+## 16. Conformance and Reference Rules
+
+> See [docs/AUTHORITY-BOUNDARIES.md](docs/AUTHORITY-BOUNDARIES.md) for
+> the full authority boundary document.
+
+### 16.1 What conformance means
+
+A component conforms to this standard when:
+
+1. It correctly identifies its role in the ecosystem architecture.
+2. It traces its canonical claims to Search Authority.
+3. If it uses TTEOP, it implements TTEOP through a version-pinned
+   implementation profile and does not redefine TTEOP semantics.
+4. It uses canonical terminology correctly.
+5. It does not present legacy identifiers as current standards.
+
+### 16.2 What this standard does not define
+
+- TTEOP protocol semantics (see TTEOP specification)
+- MO§ES Framework ontology (see the Framework repository)
+- Product implementation details (see each product's documentation)
+- Search Authority internal canon structure (see Search Authority)
+
+---
+
+## 17. Canonical URLs and Identifiers
+
+> See [canon/sources.yaml](canon/sources.yaml) for the full source
+> provenance file.
+
+### 17.1 Ecosystem identifiers
+
+| Identifier | Value | Role |
+|------------|-------|------|
+| MO§ES Ecosystem Standard | `moses-ecosystem/0.1-draft` | This standard's version |
+| TTEOP | `tteop/0.1-draft` | Current protocol version |
+| sigrank/0.1-draft | legacy alias → `tteop/0.1-draft` | Legacy compatibility |
+
+### 17.2 DOIs
+
+| Entity | DOI |
+|--------|-----|
+| TTEOP version | 10.5281/zenodo.22180349 |
+| TTEOP concept | 10.5281/zenodo.22180348 |
+| Conservation Law paper | 10.5281/zenodo.20029607 |
+| Commitment Theory V.1 | 10.5281/zenodo.20031715 |
+
+### 17.3 Patents and trademarks
+
+| IP | Number | Scope |
+|----|--------|-------|
+| MO§ES™ trademark | 99408355 | IC 042, filed 2025-09-23 |
+| MO§ES patent | 63/877,177 | Constitutional Governance Architecture |
+| Signal Compression patent | 63/883,018 | Signal Compression System Engine |
+| Commitment Conservation patent | 63/991,282 | Commitment Conservation under Recursive Transformation |
+| CIVITAE patent | 19/426,028 | CIVITAS utility surface |
+
+---
+
+## 18. Machine-Readable Component Registry
+
+> See [registry/](registry/) for all machine-readable registries.
+> See [machine/](machine/) for standard metadata in JSON, YAML, and JSON-LD.
+
+### 18.1 Registry structure
+
+| File | Contents |
+|------|----------|
+| [registry/components.yaml](registry/components.yaml) | All components (unified view) |
+| [registry/standards.yaml](registry/standards.yaml) | Standards registered in the ecosystem |
+| [registry/protocols.yaml](registry/protocols.yaml) | Protocols (TTEOP) |
+| [registry/frameworks.yaml](registry/frameworks.yaml) | Frameworks (MO§ES, Commitment Theory) |
+| [registry/products.yaml](registry/products.yaml) | Products (SignalAF, SigRank, Upsilon) |
+| [registry/sites.yaml](registry/sites.yaml) | Public sites |
+
+### 18.2 Registry purpose
+
+The registries provide machine-readable references to ecosystem
+components. They contain **references to** systems, not copies of them.
+
+---
+
+## 19. Search Authority Provenance
+
+> See [references/search-authority.yaml](references/search-authority.yaml)
+> for the full reference.
+
+### 19.1 Authority source
+
+This standard is a governed public projection of the Search Authority
+master canon. Search Authority is the canonical internal authority.
+
+### 19.2 What this means
+
+- Every canonical claim in this standard traces to a Search Authority
+  canon record.
+- This standard does not independently invent canonical truth.
+- Disputed claims in Search Authority remain disputed here.
+- Owner-approved facts in Search Authority are presented as canonical here.
+
+### 19.3 Governance rules (from Search Authority)
+
+- The harness may measure authority, but it cannot manufacture authority.
+- Automated systems may not promote claims into owner-approved truth.
+- Exactly ONE MO§ES entity. Never duplicate it.
+- Canonical display: MO§ES™. Accepted prose: MO§ES. Aliases: mos2es,
+  MOSES. Never render: MO§E§ or MO§E§™.
+- Do NOT collapse Signomy and CIVITAE.
+- SigRank evaluates AI operators, not AI models.
+
+---
+
+## 20. Change History
+
+> See [CHANGELOG.md](CHANGELOG.md) for the full change history.
+
+### v0.1-draft (2026-09-04)
+
+- Initial draft of the MO§ES Ecosystem Standard.
+- Restructured as canonical information package.
+- This is a draft. It is not frozen and may change without notice.
+
+---
+
+## Governing Rule
+
+> Search Authority is the canonical internal authority. The MO§ES
+> Ecosystem Standard is a governed public projection of that canon. The
+> MO§ES Framework owns ontology, methodology, claims, and laws. TTEOP
+> owns measurement protocol semantics. Products implement and extend
+> these authorities but do not redefine them. Every MO§ES public surface
+> should be able to answer what it is, what family it belongs to, what
+> its role is, and what authority governs it.
+
+---
+# conservation-of-commitment
+
+# Conservation of Commitment
+
+> **Handbook ID**: MOS-HB-CT-001
+> **Authority sources**: CL-DEF-001, CT-001
+> **Status**: published
+
+## What it is
+
+The Conservation Law of Commitment is the claim that commitment content —
+obligations, prohibitions, and modal constraints — persists under recursive
+transformative compression when an enforcement gate is present, and degrades
+without one.
+
+**Formal statement**:
+
+> C(T(S)) ≈ C(S) with enforcement; C(T(S)) < C(S) without it
+
+## Why it matters
+
+This is the theoretical foundation for the entire MO§ES ecosystem. If
+commitment conservation holds, then governed transformation systems can
+preserve meaning across compression cycles. If it doesn't, meaning degrades
+with each transformation — which is what happens in ungoverned LLM pipelines.
+
+## Evidence
+
+The law is supported by EXP-001 through EXP-007 (3,950 run entries across
+7 experiments). Governed transformation shows 0.94 stability vs 0.42
+without enforcement.
+
+**Evidence level**: empirical (proof-of-concept scale)
+**Confidence**: medium
+
+## Limitations
+
+- Proof-of-concept scale (20 signals, 100 sentences, 50 code snippets, 25 proofs)
+- No cross-model replication yet (Claude, Llama, GPT-4)
+- NLI oracle may not be transitive
+- Jaccard metric is blind to NP-negation forms (EXP-007)
+- 9 failure modes discovered (Formal Collapse, Self-referential Collapse, etc.)
+
+## What would falsify it
+
+1. If F_10(S) < tau for a non-trivial fraction of samples under enforced regime
+2. If ungoverned transformation preserves commitment at F_10(S) >= tau
+
+## What depends on it
+
+- MO§ES enforcement architecture (MO-DEF-001)
+- SigRank measurement system (SIGRANK-DEF-001)
+- The entire governed-compression value proposition
+
+## References
+
+- Conservation Law paper: https://doi.org/10.5281/zenodo.20029607
+- Prospectus P-000: https://doi.org/10.5281/zenodo.20031715
+- Experimental record: https://doi.org/10.5281/zenodo.19105225
+- Framework claim: CT-001, CT-002, CT-003
+
+## What it is NOT
+
+- It is NOT "McHenry's Law" (personal name attribution is prohibited)
+- It is NOT a policy or metaphor — it is a falsifiable empirical claim
+- It is NOT the same as cryptographic commitment schemes
+- It is NOT the same as Conservation of Resources theory
+- The harness is NOT the production enforcement implementation
+
+---
+# moses-framework-overview
+
+# MO§ES Framework Overview
+
+> **Handbook ID**: MOS-HB-FWK-001
+> **Authority sources**: MO-DEF-001
+> **Status**: published
+
+## What it is
+
+The MO§ES Framework is the formal framework that defines the ontology, laws,
+and epistemic states underlying the MO§ES ecosystem. It lives in
+`moses-framework/` and contains:
+
+- **Claims registry** — 27 formal claims with epistemic states
+- **Ontology** — definitions, primitives, relations
+- **Intelligence taxonomy** — BI, AAI, SI classification
+- **Intelligence Provenance** — tracing intelligence-bearing events
+- **Measurement** — Micro Evals and evaluation framework
+- **Prior art** — novelty and collision analysis
+
+## Epistemic states
+
+The Framework preserves its own epistemic states, which are SEPARATE from
+Search Authority approval states:
+
+| State | Meaning |
+|-------|---------|
+| DEFINED | True by construction (not empirical) |
+| DERIVED | Follows logically from definitions |
+| OBSERVED | Empirical support, not yet replicated |
+| SUPPORTED | Replicated or scaled evidence |
+| HYPOTHESIS | Testable, insufficient evidence |
+| SPECULATIVE | Not yet testable |
+| EXTERNAL | From external literature |
+
+**Critical**: Framework status ≠ Search Authority status.
+A claim can be DEFINED in the Framework and disputed in Search Authority.
+Both states coexist and are both valid.
+
+## Claim families
+
+| Prefix | Domain | Count |
+|--------|--------|-------|
+| CT- | Commitment Theory core | 10 |
+| INT- | Intelligence taxonomy | 6 |
+| IP- | Intelligence Provenance | 3 |
+| CONN- | Connection claims | 3 |
+| PA- | Prior-art claims | 3 |
+| MEAS- | Measurement claims | 2 |
+
+## What it is NOT
+
+- The Framework is NOT canonical truth — Search Authority is
+- The Framework does NOT promote its claims to owner-approved status
+- The Framework does NOT replace Search Authority's approval ledger
+- The Framework's epistemic states are NOT collapsed into confidence levels
+
+## References
+
+- Framework repo: https://github.com/SunrisesIllNeverSee/moses-framework
+- Claims registry: `claims/claims-registry.yaml`
+- Ontology: `ontology/definitions.yaml`, `ontology/primitives.yaml`, `ontology/relations.yaml`
+- Conservation Law paper: https://doi.org/10.5281/zenodo.20029607
+
+---
+# moses-governance
+
+# MO§ES Governance Architecture
+
+> **Handbook ID**: MOS-HB-GOV-001
+> **Authority sources**: MO-DEF-001, MO-PROBLEM-001
+> **Status**: published
+
+## What it is
+
+MO§ES™ is the enforcement architecture that operationalizes the Conservation
+Law of Commitment. It preserves commitment content through transformation via
+compression gating, lineage tracking, and hardware anchoring.
+
+## The problem it addresses
+
+When an AI operator transforms a signal (summarizes, translates, compresses,
+restructures), the commitment content — the obligations, prohibitions, and
+modal constraints — can degrade. Without governance, this degradation is
+irreversible.
+
+MO§ES addresses this at the execution layer: it governs the transformation
+itself, ensuring that commitment is conserved through the process.
+
+## How it works (public layer)
+
+- **Compression gating**: transformations pass through an enforcement gate
+- **Lineage tracking**: every transformation is traced
+- **Hardware anchoring**: commitments are anchored to physical substrate
+
+The proprietary implementation details are not public. Patent Serial No.
+63/877,177 (Provisional) covers the operational system.
+
+## Evidence level
+
+- **Evidence level**: theoretical (public-layer specification)
+- **Confidence**: low (canonical wording under owner review)
+
+## What it is NOT
+
+- The public KASSA harness is NOT the full production implementation
+- MO§ES is NOT a model — it is an enforcement architecture
+- MO§ES does NOT define what is true — that is Search Authority's role
+
+## What depends on it
+
+- SigRank measurement system (operationalizes MO§ES governance)
+- KASSA architecture (implements MO§ES principles)
+- SignalAF (distributes MO§ES-governed signals)
+
+## References
+
+- Conservation Law paper Section 8: https://doi.org/10.5281/zenodo.20029607
+- Official site: https://mos2es.com
+- Framework claim: CT-005
+
+---
+# sigrank-measurement
+
+# SigRank Measurement System
+
+> **Handbook ID**: MOS-HB-SIG-001
+> **Authority sources**: SIGRANK-DEF-001
+> **Status**: published
+
+## What it is
+
+SigRank is an operator evaluation system that measures AI **operators**
+(not models) using telemetry primitives and derived metrics. It is the
+measurement layer that operationalizes the Conservation Law's theoretical
+foundation.
+
+## What it measures
+
+**Telemetry primitives** (4):
+- `input` — tokens consumed
+- `output` — tokens produced
+- `cache_read` — cache hits
+- `cache_write` — cache writes
+
+**Derived metrics** (5):
+- **Yield** — output efficiency
+- **Leverage** — cache utilization
+- **Velocity** — throughput rate
+- **SNR** — signal-to-noise ratio
+- **10xDEV** — deviation from 10x performance
+
+## Taxonomy (three separate dimensions)
+
+- **Archetype** = shape of the token cascade (convergent, kinetic, builder, etc.)
+- **Class** = scale or qualification (NOT total token volume)
+- **Rank** = field position relative to reference population
+
+These are SEPARATE concepts. Do NOT redefine Class as total-token volume.
+
+## Evidence level
+
+- **Evidence level**: theoretical (definitions are canonical)
+- **Confidence**: medium (empirical validation ongoing)
+
+## What it is NOT
+
+- SigRank evaluates **operators**, not **models**
+- SigRank does NOT infer productivity or business outcomes from telemetry
+- SigRank does NOT measure intelligence — it measures operator behavior
+- Enterprise ideas are NOT automatically public canon
+
+## Protocol
+
+SigRank uses TTEOP (Token Telemetry Evaluation Operator Protocol) as its
+sole interoperability protocol. The legacy `sigrank/0.1-draft` wire protocol
+identifier remains as a compatibility alias.
+
+## What depends on it
+
+- SignalAF (distributes SigRank-ranked signals)
+- The leaderboard (public operator rankings)
+- TTEOP (wire protocol)
+
+## References
+
+- SigRank canon: Search Authority `canon/sigrank/canon.yaml`
+- TTEOP spec: https://github.com/SunrisesIllNeverSee/tteop-spec
+- Framework claim: CT-005 (MO§ES enforces commitment conservation)
+
+---
+# MO§ES Framework — Claims Registry (Summary)
+
+## CT-001 (DEFINED)
+
+Commitment C(S) is the minimal identity-preserving deontic invariant of a signal.
+
+## CT-002 (OBSERVED)
+
+C(T_gov(S)) = C(S) — commitment is conserved under governed transformation.
+
+## CT-003 (OBSERVED)
+
+C(T(S)) < C(S) without enforcement — commitment degrades under ungoverned transformation.
+
+## CT-004 (DEFINED)
+
+The conservation law is falsifiable.
+
+## CT-005 (DEFINED)
+
+MO§ES™ enforces commitment conservation via compression gating, lineage tracking, and hardware anchoring.
+
+## CT-006 (DEFINED)
+
+The harness is a proxy measurement tool, not the production enforcement implementation.
+
+## CT-007 (DEFINED)
+
+Commitment is a property of signals, not agents.
+
+## CT-008 (SUPPORTED)
+
+The nine novel concepts of CT occupy clean conceptual territory with zero search results as of April 15, 2026.
+
+## CT-009 (OBSERVED)
+
+Semantic entropy is irreversible without external governance.
+
+## CT-010 (DEFINED)
+
+The conservation law is substrate independent.
+
+## INT-001 (HYPOTHESIS)
+
+Intelligence-bearing events can be classified as BI (endogenously initiated) or AAI (requiring external initiation).
+
+## INT-002 (EXTERNAL)
+
+AAI is distinct from 'assisted intelligence' as used in FedTech/AMA/Forbes/PwC.
+
+## INT-003 (SPECULATIVE)
+
+BI × AAI → SI — biological intelligence combined with assisted intelligence produces system intelligence.
+
+## INT-004 (DEFINED)
+
+SI is a system property, not a participant class (v0.1 treatment).
+
+## INT-005 (HYPOTHESIS)
+
+Initiation dependency is the criterion distinguishing BI from AAI.
+
+## INT-006 (HYPOTHESIS)
+
+AAI cannot independently spark intelligence — it requires an originating external condition.
+
+## IP-001 (HYPOTHESIS)
+
+Intelligence Provenance traces intelligence-bearing events across BI, AAI, and system contexts.
+
+## IP-002 (HYPOTHESIS)
+
+Intelligence Provenance is distinct from data, content, semantic, reasoning, and decision provenance, authorship, and model attribution.
+
+## IP-003 (EXTERNAL)
+
+The term 'intelligence provenance' is not found in the searched corpus in the specified sense.
+
+## CONN-001 (HYPOTHESIS)
+
+Commitment C(S) can be traced across provenance edges as an invariant constraint.
+
+## CONN-002 (HYPOTHESIS)
+
+Micro Evals can be derived from the ontology rather than acting as a parallel system.
+
+## CONN-003 (SPECULATIVE)
+
+What happens to a commitment when it is transferred between or transformed by different intelligences can be modeled as C(I_t) → T_{I_j} → C(I_{t+1}).
+
+## PA-001 (SUPPORTED)
+
+No prior art combines conservation law for deontic content + empirical validation + falsification protocol + public harness.
+
+## PA-002 (EXTERNAL)
+
+The BI/AAI/SI tripartite taxonomy with initiation dependency is not found in the searched corpus.
+
+## PA-003 (EXTERNAL)
+
+The connection between commitment conservation and intelligence provenance (tracing a conserved invariant across provenance edges) is not found in the searched corpus.
+
+## MEAS-001 (DEFINED)
+
+Micro Evals (E_μ) are measurement primitives that instantiate ontology entities in a measurement context.
+
+## MEAS-002 (HYPOTHESIS)
+
+Micro Eval-derived benchmarks predict outcomes better than standard evaluation metrics.

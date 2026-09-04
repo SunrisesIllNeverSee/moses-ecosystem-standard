@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "generated_from": "search-authority/canonical/claims.yaml + epistemic-claims.yaml",
+  "total_claims": 60,
+  "claims": [
+    {
+      "id": "ID-DERIC-001",
+      "subject": "deric_j_mchenry",
+      "claim_type": "identity",
+      "text": "Canonical name: Deric J. McHenry.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "ID-ELLO-001",
+      "subject": "ello_cello_llc",
+      "claim_type": "identity",
+      "text": "Canonical name: Ello Cello LLC.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "ID-MOSES-001",
+      "subject": "moses",
+      "claim_type": "identity",
+      "text": "Canonical name: MO\u00a7ES\u2122 (plain aliases MO\u00a7ES, MOSES).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "ID-CT-001",
+      "subject": "commitment_theory",
+      "claim_type": "identity",
+      "text": "Canonical name: Commitment Theory (abbreviation CT).",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-readme"
+      ]
+    },
+    {
+      "id": "ID-CL-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "identity",
+      "text": "Canonical name: Conservation Law of Commitment.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "ct-paper0"
+      ]
+    },
+    {
+      "id": "ID-SR-001",
+      "subject": "sigrank",
+      "claim_type": "identity",
+      "text": "Canonical name: SigRank.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "ID-SR-INDEX-001",
+      "subject": "sigrank_index",
+      "claim_type": "identity",
+      "text": "Canonical name: SigRank Index.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-llms",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "ID-KASSA-001",
+      "subject": "kassa",
+      "claim_type": "identity",
+      "text": "Canonical name: KASSA (K-Governed Voice Architecture).",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "kassa-readme"
+      ]
+    },
+    {
+      "id": "ID-SIGNOMY-001",
+      "subject": "signomy",
+      "claim_type": "identity",
+      "text": "Canonical name: Signomy.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "signomy-site"
+      ]
+    },
+    {
+      "id": "ID-CIVITAE-001",
+      "subject": "civitae",
+      "claim_type": "identity",
+      "text": "Canonical name: CIVITAE.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "signomy-site"
+      ]
+    },
+    {
+      "id": "ID-UPSILON-001",
+      "subject": "upsilon",
+      "claim_type": "identity",
+      "text": "Canonical name: Upsilon (measurement engine / commercial product).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28"
+      ]
+    },
+    {
+      "id": "ID-YIELD-001",
+      "subject": "yield_metric",
+      "claim_type": "identity",
+      "text": "Canonical name: Yield (\u03a5) \u2014 flagship metric inside Upsilon.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "ID-SIGNALAF-001",
+      "subject": "signalaf",
+      "claim_type": "identity",
+      "text": "Canonical name: SignalAF (public brand / distribution surface).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "ENTITY-SIGNOMY-CIVITAE-DISTINCT-001",
+      "subject": "signomy",
+      "claim_type": "contrast",
+      "text": "Signomy and CIVITAE are independently resolvable entities, not the same entity.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "SR-DEF-001",
+      "subject": "sigrank",
+      "claim_type": "definition",
+      "text": "SigRank is an AI operator benchmark measuring token cascade efficiency, not AI models.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "SR-CONTRAST-001",
+      "subject": "sigrank",
+      "claim_type": "contrast",
+      "text": "SigRank evaluates AI operators, not AI models.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "SR-PROBLEM-001",
+      "subject": "sigrank",
+      "claim_type": "problem",
+      "text": "SigRank addresses AI operator efficiency, a problem model leaderboards do not address.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "SR-DISCOVERY-001",
+      "subject": "sigrank",
+      "claim_type": "discovery",
+      "text": "SigRank is runnable and inspectable at signalaf.com and via its CLI.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme"
+      ]
+    },
+    {
+      "id": "SR-METRIC-UPSILON-001",
+      "subject": "sigrank",
+      "claim_type": "formula",
+      "text": "Upsilon Yield = (cache_read * output) / max(input,1)^2.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-ontology-metrics",
+        "sigrank-methodology-metrics"
+      ]
+    },
+    {
+      "id": "SR-METRIC-VELOCITY-001",
+      "subject": "sigrank",
+      "claim_type": "formula",
+      "text": "Velocity = output / max(input,1).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-ontology-metrics",
+        "sigrank-methodology-metrics"
+      ]
+    },
+    {
+      "id": "SR-METRIC-LEVERAGE-001",
+      "subject": "sigrank",
+      "claim_type": "formula",
+      "text": "Leverage = cache_read / max(input,1).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-ontology-metrics",
+        "sigrank-methodology-metrics"
+      ]
+    },
+    {
+      "id": "SR-METRIC-SNR-001",
+      "subject": "sigrank",
+      "claim_type": "formula",
+      "text": "Signal-to-Noise Ratio = output / (input + output).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-ontology-metrics",
+        "sigrank-methodology-metrics"
+      ]
+    },
+    {
+      "id": "SR-METRIC-10XDEV-001",
+      "subject": "sigrank",
+      "claim_type": "formula",
+      "text": "10xDEV = log10(leverage).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-ontology-metrics",
+        "sigrank-methodology-metrics"
+      ]
+    },
+    {
+      "id": "SR-ARCHETYPE-001",
+      "subject": "sigrank",
+      "claim_type": "taxonomy",
+      "text": "SigRank build archetypes: convergent, kinetic, builder, recursive, amplifier, contextual, archivist, deep-reader, priming, input-bound.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-taxonomy",
+        "sigrank-archetype-comparison"
+      ]
+    },
+    {
+      "id": "CT-DEF-001",
+      "subject": "commitment_theory",
+      "claim_type": "definition",
+      "text": "Commitment Theory definition (interpretive wording under owner review).",
+      "canonical_status": "disputed",
+      "source_refs": [
+        "ct-search-index",
+        "ct-p000"
+      ]
+    },
+    {
+      "id": "CT-CONTRAST-001",
+      "subject": "commitment_theory",
+      "claim_type": "contrast",
+      "text": "Commitment Theory is distinct from Conservation of Resources theory and cryptographic commitment schemes.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-p000"
+      ]
+    },
+    {
+      "id": "CT-DISCOVERY-001",
+      "subject": "commitment_theory",
+      "claim_type": "discovery",
+      "text": "Commitment Theory is maintained on GitHub and Zenodo.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ]
+    },
+    {
+      "id": "CL-DEF-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "definition",
+      "text": "Conservation Law of Commitment definition (interpretive wording under owner review).",
+      "canonical_status": "disputed",
+      "source_refs": [
+        "ct-paper0",
+        "ct-search-index"
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "medium"
+      },
+      "basis": {
+        "summary": "The Conservation Law of Commitment is defined in the deposited paper (DOI: 10.5281/zenodo.20029607) as the claim that commitment content persists under recursive transformative compression with enforcement, and degrades without it.",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-001"
+      },
+      "limitations": [
+        "Canonical wording is under owner review \u2014 interpretive phrasing may change.",
+        "The definition is distinct from its empirical validation."
+      ],
+      "falsification": {
+        "falsifiable": true,
+        "criteria": [
+          "If commitment content is NOT conserved under enforced transformation for a non-trivial fraction of samples, the law is falsified."
+        ],
+        "framework_falsification_ref": "CT-002 falsification field"
+      }
+    },
+    {
+      "id": "CL-CLASS-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "classification",
+      "text": "The Conservation Law of Commitment is a falsifiable empirical claim, not a policy or metaphor.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-p000"
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "high"
+      },
+      "basis": {
+        "summary": "The Conservation Law is explicitly designed as a falsifiable empirical claim with operational definitions and a public harness.",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-004"
+      },
+      "limitations": [
+        "Falsifiability is a property of the claim design, not the result."
+      ],
+      "falsification": {
+        "falsifiable": true,
+        "criteria": [
+          "If the law cannot be operationally tested, it loses its falsifiable status."
+        ],
+        "framework_falsification_ref": "CT-004 falsification field"
+      }
+    },
+    {
+      "id": "CL-PROBLEM-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "problem",
+      "text": "Under governed transformation commitment is conserved; under ungoverned transformation it decays.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "ct-p000",
+        "ct-paper0"
+      ],
+      "epistemic": {
+        "evidence_level": "empirical",
+        "confidence_level": "medium"
+      },
+      "basis": {
+        "summary": "Supported by EXP-001 through EXP-007 (3,950 run entries). Governed transformation shows 0.94 stability vs 0.42 without enforcement. DOI: 10.5281/zenodo.19105225",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-002"
+      },
+      "limitations": [
+        "Proof-of-concept scale (20 signals, 100 sentences, 50 code snippets, 25 proofs).",
+        "Not yet replicated at >10,000 samples.",
+        "No cross-model replication yet (Claude, Llama, GPT-4).",
+        "NLI oracle may not be transitive (explicitly not claimed).",
+        "Jaccard metric is blind to NP-negation forms (EXP-007)."
+      ],
+      "falsification": {
+        "falsifiable": true,
+        "criteria": [
+          "F_10(S) < tau for non-trivial fraction of samples under enforced regime.",
+          "Ungoverned transformation preserves commitment at F_10(S) >= tau for non-trivial fraction."
+        ],
+        "framework_falsification_ref": "CT-002 and CT-003 falsification fields"
+      }
+    },
+    {
+      "id": "CL-DISCOVERY-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "discovery",
+      "text": "The Conservation Law paper, experiments, and harness are on Zenodo and GitHub.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ],
+      "epistemic": {
+        "evidence_level": "production",
+        "confidence_level": "high"
+      },
+      "basis": {
+        "summary": "The Conservation Law paper, experiments, and harness are publicly deposited on Zenodo and GitHub. This is a mechanical fact about publication location.",
+        "source_system": "none"
+      },
+      "limitations": [],
+      "falsification": {
+        "falsifiable": false,
+        "criteria": []
+      }
+    },
+    {
+      "id": "MO-DEF-001",
+      "subject": "moses",
+      "claim_type": "definition",
+      "text": "MO\u00a7ES\u2122 definition (interpretive wording under owner review).",
+      "canonical_status": "disputed",
+      "source_refs": [
+        "moses-site-data",
+        "ct-readme"
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "low"
+      },
+      "basis": {
+        "summary": "MOSES is defined in the paper (Section 8) and on mos2es.com as the enforcement architecture for commitment conservation. The exact public wording is under owner review.",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-005"
+      },
+      "limitations": [
+        "Canonical wording is under owner review \u2014 'semantic meaning at execution' is NOT owner-approved.",
+        "Proprietary implementation details are excluded from public claims."
+      ],
+      "falsification": {
+        "falsifiable": false,
+        "criteria": [],
+        "framework_falsification_ref": "CT-005 falsification field (N/A \u2014 definitional)"
+      }
+    },
+    {
+      "id": "MO-PROBLEM-001",
+      "subject": "moses",
+      "claim_type": "problem",
+      "text": "MO\u00a7ES\u2122 addresses an execution-layer governance problem.",
+      "canonical_status": "disputed",
+      "source_refs": [
+        "moses-site-data"
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "medium"
+      },
+      "basis": {
+        "summary": "MOSES addresses execution-layer governance: preserving commitment content through transformation via compression gating, lineage tracking, and hardware anchoring.",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-005"
+      },
+      "limitations": [
+        "Public-layer specification only \u2014 proprietary details excluded.",
+        "The harness is a proxy measurement tool, not the production implementation."
+      ],
+      "falsification": {
+        "falsifiable": false,
+        "criteria": []
+      }
+    },
+    {
+      "id": "MO-DISCOVERY-001",
+      "subject": "moses",
+      "claim_type": "discovery",
+      "text": "The official MO\u00a7ES\u2122 website is mos2es.com, with related research on Commitment Theory and Zenodo.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "moses-site-data",
+        "ct-readme"
+      ],
+      "epistemic": {
+        "evidence_level": "production",
+        "confidence_level": "high"
+      },
+      "basis": {
+        "summary": "The official MOSES website is mos2es.com. Related research is on Commitment Theory GitHub and Zenodo. Mechanical fact.",
+        "source_system": "none"
+      },
+      "limitations": [],
+      "falsification": {
+        "falsifiable": false,
+        "criteria": []
+      }
+    },
+    {
+      "id": "MO-KASSA-BOUNDARY-001",
+      "subject": "kassa",
+      "claim_type": "boundary",
+      "text": "The public KASSA harness is not the full production MO\u00a7ES\u2122 implementation.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "kassa-readme",
+        "kassa-ip-boundary"
+      ],
+      "epistemic": {
+        "evidence_level": "theoretical",
+        "confidence_level": "high"
+      },
+      "basis": {
+        "summary": "The public KASSA harness is explicitly a proxy scaffold, not the full production MOSES implementation. Patent Serial No. 63/877,177 covers the operational system.",
+        "source_system": "moses-framework",
+        "source_claim_id": "CT-006"
+      },
+      "limitations": [
+        "Boundary is by design, not a limitation of the research."
+      ],
+      "falsification": {
+        "falsifiable": false,
+        "criteria": []
+      }
+    },
+    {
+      "id": "KASSA-DEF-001",
+      "subject": "kassa",
+      "claim_type": "definition",
+      "text": "KASSA is a K-Governed Voice Architecture that commits state before intelligence branches using hash-lock read-only fanout.",
+      "canonical_status": "source_supported",
+      "source_refs": [
+        "kassa-readme"
+      ]
+    },
+    {
+      "id": "REL-DERIC-ELLO-001",
+      "subject": "deric_j_mchenry",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-DERIC-MOSES-001",
+      "subject": "deric_j_mchenry",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-ELLO-MOSES-001",
+      "subject": "ello_cello_llc",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-DERIC-CT-001",
+      "subject": "deric_j_mchenry",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "ct-p000",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-CT-CL-001",
+      "subject": "commitment_theory",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-p000",
+        "ct-readme",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-MOSES-CT-001",
+      "subject": "moses",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-p000",
+        "sigrank-science",
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-MOSES-CL-001",
+      "subject": "moses",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-paper0",
+        "sigrank-science",
+        "ct-p000",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-CL-SR-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-science",
+        "sigrank-llms",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-SR-INDEX-001",
+      "subject": "sigrank",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-llms",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-MOSES-SIGNOMY-001",
+      "subject": "moses",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "signomy-site",
+        "signomy-faq",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-MOSES-CIVITAE-001",
+      "subject": "moses",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "signomy-site",
+        "signomy-faq",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "REL-MOSES-KASSA-001",
+      "subject": "kassa",
+      "claim_type": "relationship",
+      "text": null,
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "kassa-readme",
+        "kassa-ip-boundary",
+        "owner-entity-graph-2026-08-14"
+      ]
+    },
+    {
+      "id": "AUTHOR-CT-001",
+      "subject": "commitment_theory",
+      "claim_type": "authorship",
+      "text": "Commitment Theory was authored by Deric J. McHenry.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "ct-p000"
+      ]
+    },
+    {
+      "id": "AUTHOR-CL-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "authorship",
+      "text": "The Conservation Law of Commitment paper was authored by Deric J. McHenry.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "ct-paper0"
+      ]
+    },
+    {
+      "id": "SRC-CT-PROSPECTUS-001",
+      "subject": "commitment_theory",
+      "claim_type": "provenance",
+      "text": "Commitment Theory prospectus DOI 10.5281/zenodo.20031715.",
+      "canonical_status": "disputed",
+      "source_refs": [
+        "ct-readme"
+      ]
+    },
+    {
+      "id": "SRC-CL-PAPER-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "provenance",
+      "text": "Conservation Law paper version DOI 10.5281/zenodo.20029607.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-paper0"
+      ]
+    },
+    {
+      "id": "SRC-CL-CONCEPT-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "provenance",
+      "text": "Conservation Law concept DOI 10.5281/zenodo.18267278 (distinct from version DOI 10.5281/zenodo.20029607).",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-paper0"
+      ]
+    },
+    {
+      "id": "SRC-CL-EXP-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "provenance",
+      "text": "Commitment Conservation Experimental Record DOI 10.5281/zenodo.19105225.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ]
+    },
+    {
+      "id": "SRC-CL-HARNESS-001",
+      "subject": "conservation_law_of_commitment",
+      "claim_type": "provenance",
+      "text": "Commitment Transformation Harness DOI 10.5281/zenodo.19109397.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ]
+    },
+    {
+      "id": "SRC-SR-001",
+      "subject": "sigrank",
+      "claim_type": "provenance",
+      "text": "Canonical primary sources for SigRank are signalaf.com and the sigrank-app repository.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "SRC-MOSES-001",
+      "subject": "moses",
+      "claim_type": "provenance",
+      "text": "The canonical primary URL for MO\u00a7ES\u2122 is mos2es.com.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "moses-site-data"
+      ]
+    },
+    {
+      "id": "SRC-DERIC-001",
+      "subject": "deric_j_mchenry",
+      "claim_type": "provenance",
+      "text": "Deric J. McHenry identity sources: ORCID 0009-0002-9904-5390 and the Conservation Law paper.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "moses-site-data"
+      ]
+    },
+    {
+      "id": "SR-INDEX-DISCOVERY-001",
+      "subject": "sigrank_index",
+      "claim_type": "discovery",
+      "text": "The SigRank Index and methodology are inspectable at signalaf.com/research and /methodology.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "sigrank-llms"
+      ]
+    },
+    {
+      "id": "ID-TTEOP-001",
+      "subject": "tteop",
+      "claim_type": "identity",
+      "text": "Canonical name: TTEOP (Token Telemetry Evaluation Operator Protocol). Sole interoperability protocol authority for the token telemetry / AI operator measurement layer.",
+      "canonical_status": "owner_approved",
+      "source_refs": [
+        "tteop-spec-readme",
+        "tteop-authority-architecture-directive-2026-09-02"
+      ]
+    }
+  ]
+}

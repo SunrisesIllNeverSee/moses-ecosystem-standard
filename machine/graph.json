@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "generated_from": "search-authority/canonical/claim-relationships.yaml",
+  "node_count": 28,
+  "edge_count": 33,
+  "nodes": [
+    {
+      "id": "CL-DEF-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "CL-PROBLEM-001",
+      "type": "claim",
+      "evidence_level": "empirical",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "CL-CLASS-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "high"
+    },
+    {
+      "id": "MO-DEF-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "low"
+    },
+    {
+      "id": "MO-PROBLEM-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "MO-KASSA-BOUNDARY-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "high"
+    },
+    {
+      "id": "SIGRANK-DEF-001",
+      "type": "claim",
+      "evidence_level": "theoretical",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "CT-001",
+      "type": "claim"
+    },
+    {
+      "id": "CT-002",
+      "type": "claim"
+    },
+    {
+      "id": "CT-003",
+      "type": "claim"
+    },
+    {
+      "id": "CT-004",
+      "type": "claim"
+    },
+    {
+      "id": "CT-005",
+      "type": "claim"
+    },
+    {
+      "id": "CT-006",
+      "type": "claim"
+    },
+    {
+      "id": "ct-paper0",
+      "type": "evidence",
+      "direction": "supports",
+      "confidence_level": "high"
+    },
+    {
+      "id": "ct-p000",
+      "type": "evidence",
+      "direction": "supports",
+      "confidence_level": "high"
+    },
+    {
+      "id": "ct-experimental-record",
+      "type": "evidence",
+      "direction": "supports",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "exp-003",
+      "type": "evidence",
+      "direction": "supports",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "exp-005",
+      "type": "evidence",
+      "direction": "supports",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "exp-006",
+      "type": "evidence",
+      "direction": "qualifies",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "exp-007",
+      "type": "evidence",
+      "direction": "qualifies",
+      "confidence_level": "medium"
+    },
+    {
+      "id": "moses-site-data",
+      "type": "evidence",
+      "direction": "contextualizes",
+      "confidence_level": "high"
+    },
+    {
+      "id": "MO-DISCOVERY-001",
+      "type": "claim",
+      "evidence_level": "production",
+      "confidence_level": "high"
+    },
+    {
+      "id": "FALS-CL001-01",
+      "type": "falsification_condition"
+    },
+    {
+      "id": "FALS-CL002-01",
+      "type": "falsification_condition"
+    },
+    {
+      "id": "WEAK-CL001-02",
+      "type": "falsification_condition"
+    },
+    {
+      "id": "MOS-HB-CT-001",
+      "type": "handbook_entry"
+    },
+    {
+      "id": "MOS-HB-GOV-001",
+      "type": "handbook_entry"
+    },
+    {
+      "id": "MOS-HB-SIG-001",
+      "type": "handbook_entry"
+    }
+  ],
+  "edges": [
+    {
+      "from": "CL-DEF-001",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "The definition of the Conservation Law supports the problem statement."
+    },
+    {
+      "from": "CL-PROBLEM-001",
+      "to": "CL-DEF-001",
+      "type": "depends_on",
+      "notes": "The problem statement depends on the definition being valid."
+    },
+    {
+      "from": "CL-CLASS-001",
+      "to": "CL-DEF-001",
+      "type": "depends_on",
+      "notes": "The classification as falsifiable depends on the definition."
+    },
+    {
+      "from": "CL-CLASS-001",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "Being falsifiable supports the empirical problem statement."
+    },
+    {
+      "from": "MO-DEF-001",
+      "to": "CL-DEF-001",
+      "type": "depends_on",
+      "notes": "MOSES definition depends on the Conservation Law definition."
+    },
+    {
+      "from": "MO-PROBLEM-001",
+      "to": "MO-DEF-001",
+      "type": "depends_on",
+      "notes": "The execution-layer governance problem depends on MOSES being defined."
+    },
+    {
+      "from": "MO-PROBLEM-001",
+      "to": "CL-PROBLEM-001",
+      "type": "depends_on",
+      "notes": "MOSES governance problem depends on the Conservation Law holding."
+    },
+    {
+      "from": "MO-KASSA-BOUNDARY-001",
+      "to": "MO-DEF-001",
+      "type": "depends_on",
+      "notes": "The KASSA boundary depends on MOSES being defined."
+    },
+    {
+      "from": "SIGRANK-DEF-001",
+      "to": "CL-PROBLEM-001",
+      "type": "depends_on",
+      "notes": "SigRank measurement depends on the Conservation Law being the theoretical foundation."
+    },
+    {
+      "from": "SIGRANK-DEF-001",
+      "to": "MO-PROBLEM-001",
+      "type": "supports",
+      "notes": "SigRank operationalizes the MOSES governance problem."
+    },
+    {
+      "from": "CL-DEF-001",
+      "to": "CT-001",
+      "type": "derived_from",
+      "notes": "SA Conservation Law definition is derived from Framework CT-001.",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "CL-PROBLEM-001",
+      "to": "CT-002",
+      "type": "derived_from",
+      "notes": "SA Conservation Law problem statement derived from Framework CT-002 (conservation with enforcement).",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "CL-PROBLEM-001",
+      "to": "CT-003",
+      "type": "derived_from",
+      "notes": "SA Conservation Law problem statement derived from Framework CT-003 (degradation without enforcement).",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "CL-CLASS-001",
+      "to": "CT-004",
+      "type": "derived_from",
+      "notes": "SA falsifiability classification derived from Framework CT-004.",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "MO-DEF-001",
+      "to": "CT-005",
+      "type": "derived_from",
+      "notes": "SA MOSES definition derived from Framework CT-005.",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "MO-KASSA-BOUNDARY-001",
+      "to": "CT-006",
+      "type": "derived_from",
+      "notes": "SA KASSA boundary derived from Framework CT-006 (harness is proxy).",
+      "source_system": "moses-framework"
+    },
+    {
+      "from": "ct-paper0",
+      "to": "CL-DEF-001",
+      "type": "supports",
+      "notes": "Conservation Law paper Section 0 supports the definition."
+    },
+    {
+      "from": "ct-paper0",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "Conservation Law paper supports the governed/ungoverned problem statement."
+    },
+    {
+      "from": "ct-p000",
+      "to": "CL-DEF-001",
+      "type": "supports",
+      "notes": "P-000 prospectus supports the theoretical definition."
+    },
+    {
+      "from": "ct-p000",
+      "to": "CL-CLASS-001",
+      "type": "supports",
+      "notes": "P-000 supports the falsifiable classification."
+    },
+    {
+      "from": "ct-experimental-record",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "Full experimental record (3,950 runs) supports the problem statement."
+    },
+    {
+      "from": "exp-003",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "EXP-003 canonical run supports conservation with enforcement."
+    },
+    {
+      "from": "exp-005",
+      "to": "CL-PROBLEM-001",
+      "type": "supports",
+      "notes": "EXP-005 mechanism isolation supports the conservation claim."
+    },
+    {
+      "from": "exp-006",
+      "to": "CL-PROBLEM-001",
+      "type": "qualifies",
+      "notes": "EXP-006 discovered Formal Collapse \u2014 qualifies the law for complex statements."
+    },
+    {
+      "from": "exp-007",
+      "to": "CL-PROBLEM-001",
+      "type": "qualifies",
+      "notes": "EXP-007 discovered NP-negation Blindness \u2014 qualifies the measurement methodology."
+    },
+    {
+      "from": "moses-site-data",
+      "to": "MO-DEF-001",
+      "type": "contextualizes",
+      "notes": "mos2es.com provides context for the MOSES definition."
+    },
+    {
+      "from": "moses-site-data",
+      "to": "MO-DISCOVERY-001",
+      "type": "supports",
+      "notes": "mos2es.com is the official site \u2014 supports the discovery claim."
+    },
+    {
+      "from": "FALS-CL001-01",
+      "to": "CL-PROBLEM-001",
+      "type": "falsified_by",
+      "notes": "If F_10(S) < tau under enforcement, the conservation claim is falsified.",
+      "source_system": "commitment-theory"
+    },
+    {
+      "from": "FALS-CL002-01",
+      "to": "CL-PROBLEM-001",
+      "type": "falsified_by",
+      "notes": "If ungoverned transformation preserves commitment, the degradation claim is falsified.",
+      "source_system": "commitment-theory"
+    },
+    {
+      "from": "WEAK-CL001-02",
+      "to": "CL-PROBLEM-001",
+      "type": "qualifies",
+      "notes": "Measurement methodology blind spots qualify the conservation claim.",
+      "source_system": "commitment-theory"
+    },
+    {
+      "from": "CL-DEF-001",
+      "to": "MOS-HB-CT-001",
+      "type": "described_by",
+      "notes": "Conservation Law definition will be described by handbook entry MOS-HB-CT-001.",
+      "planned": true
+    },
+    {
+      "from": "MO-DEF-001",
+      "to": "MOS-HB-GOV-001",
+      "type": "described_by",
+      "notes": "MOSES definition will be described by handbook entry MOS-HB-GOV-001.",
+      "planned": true
+    },
+    {
+      "from": "SIGRANK-DEF-001",
+      "to": "MOS-HB-SIG-001",
+      "type": "described_by",
+      "notes": "SigRank definition will be described by handbook entry MOS-HB-SIG-001.",
+      "planned": true
+    }
+  ]
+}

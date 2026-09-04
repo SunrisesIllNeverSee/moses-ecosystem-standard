@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "generated_from": "search-authority/canon/shared/sources.yaml",
+  "total_sources": 18,
+  "sources": [
+    {
+      "id": "conservation_law_v05",
+      "title": "A Conservation Law for Commitment in Language",
+      "source_type": "paper",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.20029607",
+      "concept_doi": "10.5281/zenodo.18267278",
+      "version": "V.05",
+      "url": "https://doi.org/10.5281/zenodo.20029607",
+      "repository": "https://github.com/SunrisesIllNeverSee/commitment-conservation",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-paper0"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "conservation_law_v05_ello_cello",
+      "title": "A Conservation Law for Commitment in Language",
+      "source_type": "paper",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Ello Cello LLC",
+      "doi": "10.5281/zenodo.21070002",
+      "version": "V.05",
+      "url": "https://doi.org/10.5281/zenodo.21070002",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "ct-deposits"
+      ],
+      "notes": "Published June 30, 2026. Verified via Zenodo (2026-08-24). Separate deposit of V.05 from a different publisher (Ello Cello LLC vs Zenodo). \"Is new version of\" links to 18267279, 18271102, 18274930, 18792459 but NOT to 20029607 \u2014 appears to be a parallel deposit, not a supersession. Mechanical source registration only. Do NOT promote propositions to owner-approved canon based on this source alone."
+    },
+    {
+      "id": "commitment_experimental_record",
+      "title": "Commitment Conservation Experimental Record",
+      "source_type": "experimental_record",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.19105225",
+      "version": "1.0.0",
+      "url": "https://doi.org/10.5281/zenodo.19105225",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "commitment_transformation_harness",
+      "title": "Commitment Transformation Harness",
+      "source_type": "reproducibility_harness",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.19109397",
+      "version": "1.0.0",
+      "url": "https://doi.org/10.5281/zenodo.19109397",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "commitment_theory_prospectus",
+      "title": "Propositions of Commitment Theory: A Research Prospectus",
+      "source_type": "research_prospectus",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.20031715",
+      "version": "V.1",
+      "url": "https://doi.org/10.5281/zenodo.20031715",
+      "repository": "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "disputed",
+      "source_refs": [
+        "ct-readme"
+      ],
+      "conflicts": [
+        {
+          "field": "publication_status",
+          "source_a": "CT/README.md says Published Deposit with DOI 10.5281/zenodo.20031715.",
+          "source_b": "pipeline P-000 README still says ready for deposit and DOI minting pending.",
+          "resolution": "Registry follows the newer repository root README; conflict remains visible."
+        }
+      ],
+      "notes": "V.1 publication-status dispute is now narrow-resolved by V2 (see commitment_theory_prospectus_v2). A published version exists. V.1 content discrepancies with V2 are NOT auto-resolved."
+    },
+    {
+      "id": "commitment_theory_prospectus_v2",
+      "title": "Propositions of Commitment Theory: A Research Prospectus",
+      "source_type": "research_prospectus",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "publisher": "Ello Cello LLC",
+      "doi": "10.5281/zenodo.21069704",
+      "version": "V.1",
+      "url": "https://doi.org/10.5281/zenodo.21069704",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "ct-deposits"
+      ],
+      "notes": "Published June 30, 2026. Verified via Zenodo. Resolves the narrow question: a published version of the Prospectus exists. Does NOT auto-resolve every V1/V2 content discrepancy. Note: V2 description text contains the deprecated rendering \"MO\u00a7E\u00a7\u2122\" \u2014 this is a content issue in the published record, not auto-corrected here."
+    },
+    {
+      "id": "sigrank_primary",
+      "title": "SigRank",
+      "source_type": "website",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://signalaf.com",
+      "repository": "https://github.com/SunrisesIllNeverSee/sigrank-app",
+      "entities": [
+        "sigrank",
+        "sigrank_index",
+        "deric_j_mchenry",
+        "ello_cello_llc"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "sigrank_methodology",
+      "title": "SigRank Methodology",
+      "source_type": "documentation",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://signalaf.com/methodology",
+      "entities": [
+        "sigrank",
+        "sigrank_index"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "sigrank-llms"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "moses_primary",
+      "title": "MO\u00a7ES\u2122 Sovereign Signal Governance",
+      "source_type": "website",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://mos2es.com",
+      "entities": [
+        "moses",
+        "deric_j_mchenry",
+        "ello_cello_llc"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "moses-site-data"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "kassa_primary",
+      "title": "KASSA \u2014 K-Governed Voice Architecture",
+      "source_type": "repository",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://github.com/SunrisesIllNeverSee/KASSA",
+      "repository": "https://github.com/SunrisesIllNeverSee/KASSA",
+      "entities": [
+        "kassa",
+        "deric_j_mchenry",
+        "ello_cello_llc"
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "kassa-readme"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "kassa_ip_boundary",
+      "title": "KASSA IP Boundary",
+      "source_type": "documentation",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://github.com/SunrisesIllNeverSee/KASSA",
+      "entities": [
+        "kassa",
+        "moses"
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "kassa-ip-boundary"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "signomy_site",
+      "title": "Signomy",
+      "source_type": "website",
+      "authors": [
+        "Ello Cello LLC"
+      ],
+      "url": "https://signomy.xyz",
+      "entities": [
+        "signomy",
+        "civitae",
+        "ello_cello_llc"
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "signomy-site",
+        "ct-readme"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "commitment_theory_repo",
+      "title": "Commitment Theory repository",
+      "source_type": "repository",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "url": "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+      "repository": "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+      "entities": [
+        "deric_j_mchenry",
+        "commitment_theory",
+        "conservation_law_of_commitment"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-readme"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "upsilon_architecture_directive",
+      "title": "Foundational Brand Architecture Change \u2014 MO\u00a7ES \u2192 Upsilon \u2192 SigRank",
+      "source_type": "owner_directive",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "url": "file:///Users/dericmchenry/Developer/_control/ello-repo-control/artifacts/owner_directives/2026-08-28-upsilon-architecture/\u2605_2026-08-28_FOUNDATIONAL_BRAND_ARCHITECTURE_CHANGE.md",
+      "entities": [
+        "moses",
+        "upsilon",
+        "sigrank",
+        "signalaf",
+        "yield_metric",
+        "ello_cello_llc"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "tteop_protocol",
+      "title": "TTEOP \u2014 Token Telemetry Evaluation Operator Protocol",
+      "source_type": "repository",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://github.com/SunrisesIllNeverSee/otep-spec",
+      "repository": "https://github.com/SunrisesIllNeverSee/otep-spec",
+      "doi": "10.5281/zenodo.22180349",
+      "concept_doi": "10.5281/zenodo.22180348",
+      "version": "0.1.5-draft",
+      "entities": [
+        "tteop",
+        "deric_j_mchenry",
+        "ello_cello_llc"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "tteop-spec-readme"
+      ],
+      "conflicts": [],
+      "notes": "Sole interoperability protocol authority for the token telemetry / AI operator measurement layer. GitHub repository name is otep-spec (historical, kept for URL stability); npm package is tteop-spec; protocol name is TTEOP. Version DOI 10.5281/zenodo.22180349 (v0.1.5-draft); concept DOI 10.5281/zenodo.22180348."
+    },
+    {
+      "id": "tteop_authority_architecture_directive",
+      "title": "TTEOP / SignalAF Operationalization + Authority Architecture Baseline",
+      "source_type": "owner_directive",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "url": "file:///Users/dericmchenry/Developer/_control/ello-repo-control/artifacts/owner_directives/2026-09-02-tteop-signalaf-operationalization/AUTHORITY_ARCHITECTURE_BASELINE.md",
+      "entities": [
+        "tteop",
+        "sigrank",
+        "signalaf",
+        "upsilon",
+        "moses"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "tteop-authority-architecture-directive-2026-09-02"
+      ],
+      "conflicts": [],
+      "notes": "Owner-directed authority architecture baseline 2026-09-02. Establishes TTEOP as the sole interoperability protocol authority, classifies sigrank-standard as a legacy predecessor (not a second active standard), classifies tteop-mcp as transport, and defines product implementation profiles for SignalAF/SigRank/Upsilon."
+    },
+    {
+      "id": "sigrank_standard_legacy",
+      "title": "SigRank Standard (legacy predecessor of TTEOP)",
+      "source_type": "repository",
+      "authors": [
+        "Deric J. McHenry",
+        "Ello Cello LLC"
+      ],
+      "url": "https://github.com/SunrisesIllNeverSee/sigrank-standard",
+      "repository": "https://github.com/SunrisesIllNeverSee/sigrank-standard",
+      "version": "0.1.0-draft",
+      "entities": [
+        "tteop",
+        "sigrank_standard"
+      ],
+      "status": "superseded",
+      "source_refs": [
+        "sigrank-standard-readme"
+      ],
+      "conflicts": [],
+      "notes": "Legacy predecessor of TTEOP. Original sigrank/0.1-draft measurement specification. Superseded by otep-spec (TTEOP). Retained for migration evidence, historical provenance, and backward compatibility. The legacy version alias sigrank/0.1-draft is accepted by TTEOP for backward compatibility and resolves to current TTEOP semantics, not to a second active standard."
+    },
+    {
+      "id": "wikidata_official_submission_2026-09-03",
+      "title": "Wikidata official submission \u2014 MO\u00a7ES, SigRank, and SignalAF entity references",
+      "source_type": "external_knowledge_base",
+      "authors": [
+        "Deric J. McHenry"
+      ],
+      "url": "https://www.wikidata.org/wiki/User:Burnmydays",
+      "entities": [
+        "moses",
+        "sigrank",
+        "signalaf"
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "wikidata-submission-2026-09-03"
+      ],
+      "conflicts": [],
+      "notes": "Owner-directed Wikidata submission completed 2026-09-03. Added developer links to MO\u00a7ES and SigRank Wikidata entries. Added September 3, 2026 retrieval dates to all 12 existing references. Published short note on User:Burnmydays without financial-interest language or em dashes. Handoff records updated. All approved Wikidata changes complete."
+    }
+  ]
+}

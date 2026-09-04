@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "generated_from": "moses-ecosystem-standard/registry/standards.yaml",
+  "total_standards": 3,
+  "standards": [
+    {
+      "id": "moses_ecosystem_standard",
+      "name": "MO\u00a7ES Ecosystem Standard",
+      "version": "moses-ecosystem/0.1-draft",
+      "status": "draft",
+      "role": "Canonical public architecture and reference standard for the entire MO\u00a7ES ecosystem. Governed projection of Search Authority.",
+      "authority_owner": "search_authority",
+      "url": "https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard",
+      "description": "The canonical public architecture and reference standard for the entire MO\u00a7ES ecosystem. A governed public projection of the Search Authority master canon. Does not independently invent canonical truth \u2014 every claim traces to Search Authority. References MO\u00a7ES Framework, TTEOP, and Ello Control without redefining them.\n"
+    },
+    {
+      "id": "tteop",
+      "name": "TTEOP",
+      "version": "tteop/0.1-draft",
+      "status": "draft",
+      "role": "Sole interoperability protocol authority for token telemetry measurement.",
+      "authority_owner": "search_authority",
+      "url": "https://github.com/SunrisesIllNeverSee/otep-spec",
+      "description": "Token Telemetry Evaluation Operator Protocol. Open, vendor-neutral interoperability standard for measuring AI-operator token efficiency. Sole protocol authority for telemetry schemas, formulas, null semantics, privacy, provenance, and conformance. Legacy alias sigrank/0.1-draft resolves to tteop/0.1-draft.\n"
+    },
+    {
+      "id": "sigrank_standard_legacy",
+      "name": "sigrank-standard (legacy)",
+      "version": "sigrank/0.1-draft",
+      "status": "legacy",
+      "role": "Legacy predecessor \u2014 compatibility and migration evidence only.",
+      "authority_owner": "search_authority",
+      "url": "https://github.com/SunrisesIllNeverSee/sigrank-standard",
+      "description": "Legacy predecessor of TTEOP. Original sigrank/0.1-draft measurement specification. Retained for migration evidence, historical provenance, and backward compatibility alias resolution. Superseded by TTEOP (tteop/0.1-draft). Do not use as primary conformance authority.\n"
+    }
+  ]
+}

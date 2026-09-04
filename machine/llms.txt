@@ -1,0 +1,42 @@
+# MO§ES Ecosystem
+
+> MO§ES™ is an enforcement architecture for commitment conservation.
+> Canonical truth: Search Authority.
+
+## Core documents
+
+- [MO§ES Ecosystem Standard](STANDARD.md) — public canonical architecture
+- [Handbook](handbook/README.md) — long-form explanatory knowledge
+- [Authority Architecture](architecture/authority-architecture.md)
+- [Ecosystem Architecture](architecture/ecosystem-architecture.md)
+
+## Handbook entries
+
+- [Conservation of Commitment](handbook/foundations/conservation-of-commitment.md) (MOS-HB-CT-001)
+- [MO§ES Governance](handbook/governance/moses-governance.md) (MOS-HB-GOV-001)
+- [SigRank Measurement](handbook/measurement/sigrank-measurement.md) (MOS-HB-SIG-001)
+- [MO§ES Framework](handbook/framework/moses-framework-overview.md) (MOS-HB-FWK-001)
+
+## Machine-readable
+
+- [standard.json](machine/standard.json) — standard metadata
+- [graph.json](machine/graph.json) — claim dependency graph
+- [claims.json](machine/claims.json) — claims projection
+- [entities.json](machine/entities.json) — entity registry
+- [handbook.json](machine/handbook.json) — handbook entries
+
+## Authority
+
+- Search Authority is the canonical truth authority
+- The handbook explains canon; it does not create canon
+- All projections are generated, not hand-edited
+- No projection auto-promotes to canonical authority
+
+## Key entities
+
+- MO§ES™ — enforcement architecture for commitment conservation
+- Commitment Theory — theoretical framework
+- Conservation Law of Commitment — C(T(S)) ≈ C(S) with enforcement
+- SigRank — AI operator evaluation system
+- TTEOP — token telemetry protocol
+- SignalAF — public brand and distribution surface

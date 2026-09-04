@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "generated_from": "search-authority/canon/shared/entities.yaml",
+  "total_entities": 15,
+  "entities": [
+    {
+      "id": "deric_j_mchenry",
+      "canonical_name": "Deric J. McHenry",
+      "entity_type": "person",
+      "aliases": [
+        "Deric McHenry",
+        "djm"
+      ],
+      "canonical_urls": [
+        "https://orcid.org/0009-0002-9904-5390",
+        "https://github.com/SunrisesIllNeverSee"
+      ],
+      "primary_sources": [
+        "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+        "https://mos2es.com"
+      ],
+      "description": "Author of Commitment Theory, the Conservation Law of Commitment, and the SigRank operator evaluation system. ORCID 0009-0002-9904-5390.",
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Identity/ORCID/GitHub facts are mechanical. Do not add public aliases without owner approval."
+    },
+    {
+      "id": "ello_cello_llc",
+      "canonical_name": "Ello Cello LLC",
+      "entity_type": "organization",
+      "aliases": [
+        "Ello Cello"
+      ],
+      "canonical_urls": [
+        "https://mos2es.com/#org"
+      ],
+      "primary_sources": [
+        "https://mos2es.com",
+        "https://github.com/SunrisesIllNeverSee/Commitment_Theory"
+      ],
+      "description": "Organization associated with the owner's published works and products, including SigRank and MO\u00a7ES\u2122.",
+      "status": "owner_approved",
+      "source_refs": [
+        "ct-readme",
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Preserve as organization. Exact legal/brand predicates are separate relationship claims."
+    },
+    {
+      "id": "moses",
+      "canonical_name": "MO\u00a7ES\u2122",
+      "entity_type": "system",
+      "aliases": [
+        "MO\u00a7ES",
+        "mos2es",
+        "MOSES"
+      ],
+      "canonical_urls": [
+        "https://mos2es.com"
+      ],
+      "primary_sources": [
+        "https://mos2es.com"
+      ],
+      "description": "Sovereign signal governance system. MO\u00a7ES\u2122 is the enforcement architecture for Commitment Theory and operationalizes the Conservation Law of Commitment. Governs Signomy and CIVITAE. Patent 63/877,177 covers the enforcement architecture. Patent 19/426,028 covers the CIVITAS utility surface.",
+      "product_boundaries": [
+        "MO\u00a7ES\u2122 is the governance/enforcement architecture, not a product surface itself.",
+        "KASSA publicly demonstrates MO\u00a7ES\u2122 principles but is not the production MO\u00a7ES\u2122 implementation."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "moses-site-data",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Exactly one MO\u00a7ES\u2122 entity. It participates in several edges and may appear in multiple graph positions, but it is never duplicated. Interpretive definition terms (e.g. \"preserving semantic meaning at execution\") are not canonical here; they live as candidate claims pending owner/source review."
+    },
+    {
+      "id": "commitment_theory",
+      "canonical_name": "Commitment Theory",
+      "entity_type": "theory",
+      "aliases": [
+        "CT"
+      ],
+      "canonical_urls": [
+        "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+        "https://doi.org/10.5281/zenodo.20031715"
+      ],
+      "primary_sources": [
+        "https://github.com/SunrisesIllNeverSee/Commitment_Theory",
+        "https://doi.org/10.5281/zenodo.20031715"
+      ],
+      "description": "A research framework containing the Conservation Law of Commitment. MO\u00a7ES\u2122 is the enforcement architecture for Commitment Theory. Authored by Deric J. McHenry. Deposited on Zenodo and GitHub.",
+      "status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "ct-search-index",
+        "ct-p000"
+      ],
+      "notes": "Name and abbreviation are source-supported. Interpretive definitional language (deontic meaning, commitment kernel, governed transformation) is NOT canonical entity metadata; it is adjudicated as separate draft/disputed claims."
+    },
+    {
+      "id": "conservation_law_of_commitment",
+      "canonical_name": "Conservation Law of Commitment",
+      "entity_type": "scientific_law",
+      "aliases": [],
+      "canonical_urls": [
+        "https://doi.org/10.5281/zenodo.20029607",
+        "https://github.com/SunrisesIllNeverSee/commitment-conservation",
+        "https://signalaf.com/science"
+      ],
+      "primary_sources": [
+        "https://doi.org/10.5281/zenodo.20029607",
+        "https://github.com/SunrisesIllNeverSee/commitment-conservation"
+      ],
+      "description": "A falsifiable empirical claim that commitment is conserved under governed transformation and decays under ungoverned transformation. The theoretical foundation for SigRank. MO\u00a7ES\u2122 operationalizes it. Paper version V.05 deposited on Zenodo (DOI 10.5281/zenodo.20029607, concept DOI 10.5281/zenodo.18267278).",
+      "status": "source_supported",
+      "source_refs": [
+        "ct-paper0",
+        "ct-search-index",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Law entity and DOI linkage are source-supported. Definition wording must follow the deposited paper, not agent-composed kernel/governed- transformation phrasing."
+    },
+    {
+      "id": "sigrank",
+      "canonical_name": "SigRank",
+      "entity_type": "evaluation_system",
+      "aliases": [
+        "SigRank app"
+      ],
+      "canonical_urls": [
+        "https://signalaf.com",
+        "https://github.com/SunrisesIllNeverSee/sigrank-app"
+      ],
+      "primary_sources": [
+        "https://signalaf.com/methodology",
+        "https://github.com/SunrisesIllNeverSee/sigrank-app"
+      ],
+      "description": "Public leaderboard / benchmark / proof surface for AI operator evaluation. SigRank evaluates AI operators, not AI models. Built on the Conservation Law of Commitment. Produces the SigRank Index. Live at signalaf.com with a CLI tool. As of 2026-08-28, SigRank is the public proof surface \u2014 measurements are produced by Upsilon. Prior to 2026-08-28, \"SigRank\" was used ambiguously to refer to both the leaderboard and the measurement engine; that usage is now classified as LEGACY_TERMINOLOGY.",
+      "product_boundaries": [
+        "SigRank evaluates AI OPERATORS, not AI MODELS.",
+        "SigRank is the public leaderboard/proof surface, not the measurement engine (that is Upsilon).",
+        "SigRank measures token cascade efficiency, not productivity or business outcomes.",
+        "Brainstormed enterprise extensions are not automatically public SigRank canon.",
+        "Privacy claims distinguish content-free token telemetry from zero metadata risk."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "sigrank-readme",
+        "sigrank-llms",
+        "owner-entity-graph-2026-08-14",
+        "upsilon-architecture-directive-2026-08-28"
+      ],
+      "notes": "Evaluation-system identity and the operator-vs-model distinction are owner-approved mechanical facts. Metric/taxonomy records are governed separately in the SigRank canon. On 2026-08-28 the owner directed a foundational architecture change separating the measurement engine (Upsilon) from the public leaderboard (SigRank). SigRank's role is now narrower and clearer: public benchmark / proof surface."
+    },
+    {
+      "id": "sigrank_standard",
+      "canonical_name": "SigRank Standard",
+      "entity_type": "system",
+      "aliases": [
+        "sigrank/0.1-draft",
+        "SigRank Standard v0.1-draft"
+      ],
+      "canonical_urls": [
+        "https://github.com/SunrisesIllNeverSee/sigrank-standard"
+      ],
+      "primary_sources": [
+        "https://github.com/SunrisesIllNeverSee/sigrank-standard"
+      ],
+      "description": "Legacy measurement specification and wire protocol for AI operator telemetry. The SigRank Standard defined the original sigrank/0.1-draft protocol with four token primitives (input, output, cache_write, cache_read) and five derived metrics. It has been superseded by TTEOP (Token Telemetry Evaluation Operator Protocol) as the sole interoperability protocol authority per the owner-directed authority architecture baseline 2026-09-02. The wire protocol identifier sigrank/0.1-draft remains an accepted compatibility alias that resolves to current TTEOP semantics \u2014 it is not a second active standard. This entity is distinct from `sigrank` (the leaderboard) and exists to be the proper target of the TTEOP supersession edge.",
+      "product_boundaries": [
+        "The SigRank Standard is a legacy specification, not the current protocol authority.",
+        "TTEOP is the sole interoperability protocol authority.",
+        "sigrank/0.1-draft is a compatibility alias, not a second active standard.",
+        "The SigRank Standard is distinct from SigRank (the leaderboard)."
+      ],
+      "status": "superseded",
+      "source_refs": [
+        "sigrank-standard-readme",
+        "tteop-authority-architecture-directive-2026-09-02"
+      ],
+      "notes": "Registered 2026-09-04 to resolve the supersession edge target. The tteop_supersedes_sigrank_standard relationship previously targeted the `sigrank` entity (the leaderboard), which was incorrect \u2014 TTEOP supersedes the standard, not the leaderboard. This entity is the correct target for that edge."
+    },
+    {
+      "id": "sigrank_index",
+      "canonical_name": "SigRank Index",
+      "entity_type": "dataset",
+      "aliases": [
+        "SigRank dataset"
+      ],
+      "canonical_urls": [
+        "https://signalaf.com/research",
+        "https://signalaf.com/methodology"
+      ],
+      "primary_sources": [
+        "https://signalaf.com/research",
+        "https://signalaf.com/methodology"
+      ],
+      "description": "The dataset/index produced by SigRank. Inspectable at signalaf.com/research and /methodology.",
+      "status": "owner_approved",
+      "source_refs": [
+        "sigrank-llms",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Dataset/index entity. Verify canonical Zenodo dataset DOI in its own source record."
+    },
+    {
+      "id": "kassa",
+      "canonical_name": "KASSA",
+      "entity_type": "architecture",
+      "aliases": [
+        "K-Governed Voice Architecture"
+      ],
+      "canonical_urls": [
+        "https://github.com/SunrisesIllNeverSee/KASSA",
+        "https://sunrisesillneversee.github.io/KASSA/demo/commitment_kernel_demo_v7.html"
+      ],
+      "primary_sources": [
+        "https://github.com/SunrisesIllNeverSee/KASSA"
+      ],
+      "description": "K-Governed Voice Architecture that commits state before intelligence branches using hash-lock read-only fanout. Publicly demonstrates commitment-kernel / K-governed principles of MO\u00a7ES\u2122. The public harness is distinct from the protected production MO\u00a7ES\u2122 substrate.",
+      "product_boundaries": [
+        "The public KASSA harness is NOT the full production MO\u00a7ES\u2122 implementation."
+      ],
+      "status": "source_supported",
+      "source_refs": [
+        "kassa-readme",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Preserve KASSA identity and source repo. Architecture type and aliases must be verified from KASSA primary docs; do not infer a full MO\u00a7ES relationship from naming alone."
+    },
+    {
+      "id": "signomy",
+      "canonical_name": "Signomy",
+      "entity_type": "platform",
+      "aliases": [
+        "SIGNOMY"
+      ],
+      "canonical_urls": [
+        "https://signomy.xyz"
+      ],
+      "primary_sources": [
+        "https://signomy.xyz"
+      ],
+      "description": "A platform governed by MO\u00a7ES\u2122. Independently resolvable entity, distinct from CIVITAE.",
+      "status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "signomy-site",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Independently resolvable entity. Must NOT be collapsed with CIVITAE. The Signomy\u2013CIVITAE relationship is a separate owner/source-reviewed claim."
+    },
+    {
+      "id": "civitae",
+      "canonical_name": "CIVITAE",
+      "entity_type": "platform",
+      "aliases": [],
+      "canonical_urls": [
+        "https://signomy.xyz"
+      ],
+      "primary_sources": [
+        "https://signomy.xyz",
+        "https://github.com/SunrisesIllNeverSee/Commitment_Theory"
+      ],
+      "description": "A constitutional AI ecosystem governed by MO\u00a7ES\u2122. Independently resolvable entity, distinct from Signomy. Patent 19/426,028 covers the CIVITAS utility surface.",
+      "status": "source_supported",
+      "source_refs": [
+        "ct-readme",
+        "signomy-site",
+        "owner-entity-graph-2026-08-14"
+      ],
+      "notes": "Independently resolvable entity. Must NOT be collapsed with Signomy. The Signomy\u2013CIVITAE relationship is a separate owner/source-reviewed claim."
+    },
+    {
+      "id": "upsilon",
+      "canonical_name": "Upsilon",
+      "entity_type": "product",
+      "aliases": [],
+      "canonical_urls": [
+        "https://mos2es.org"
+      ],
+      "primary_sources": [
+        "https://mos2es.org"
+      ],
+      "description": "Commercial measurement engine / enterprise product. Upsilon consumes privacy-preserving AI usage telemetry (input tokens, output tokens, cache creation/write, cache read) and produces diagnostic measures of AI processing behavior. Governed by the MO\u00a7ES\u2122 framework. The enterprise pilot is an Upsilon pilot. Upsilon is NOT an alias for SigRank and NOT an alias for Yield. Upsilon is the engine; Yield is a metric inside Upsilon; SigRank is the public proof surface that receives results from Upsilon.",
+      "product_boundaries": [
+        "Upsilon is the measurement engine / commercial product, NOT the leaderboard (that is SigRank).",
+        "Upsilon is NOT the same as Yield. Yield is a metric inside Upsilon.",
+        "Upsilon does not require prompt text or code contents to calculate core token-derived measures.",
+        "Upsilon is governed by MO\u00a7ES\u2122 \u2014 it is not interchangeable with MO\u00a7ES\u2122.",
+        "Claims like 'higher Yield causes faster shipping' are HYPOTHESIS, not canon, unless separately supported by evidence."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28"
+      ],
+      "notes": "New first-class entity created by owner directive 2026-08-28. Prior to this date, the measurement engine function was ambiguously referred to as \"SigRank.\" That historical usage is classified as LEGACY_TERMINOLOGY. Do not rewrite historical documents to falsely imply Upsilon branding existed before 2026-08-28."
+    },
+    {
+      "id": "yield_metric",
+      "canonical_name": "Yield (\u03a5)",
+      "entity_type": "dataset",
+      "aliases": [
+        "Yield",
+        "Yield metric"
+      ],
+      "canonical_urls": [
+        "https://mos2es.org"
+      ],
+      "primary_sources": [
+        "https://mos2es.org"
+      ],
+      "description": "Flagship metric inside Upsilon. Formula: \u03a5 = (R \u00d7 O) / I\u00b2 where I = input tokens, O = output tokens, R = cache read. Equivalent: Yield = Leverage \u00d7 Velocity. Yield is a METRIC, not a product. Upsilon is the product; Yield is one metric within it. Do not collapse Upsilon and Yield because they share the Upsilon symbol.",
+      "product_boundaries": [
+        "Yield is a metric inside Upsilon, NOT the product itself.",
+        "Yield is NOT the same as Upsilon. Do not collapse them.",
+        "The broader SigRank metric system and taxonomy is preserved \u2014 Upsilon is not only Yield."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28",
+        "sigrank-llms"
+      ],
+      "notes": "Formula is mechanically approved from the SigRank methodology pages. Entity status as a distinct first-class record is owner-approved via the 2026-08-28 architecture directive. The existing SigRank metric taxonomy (Leverage, Velocity, SNR, etc.) is preserved and governed in the SigRank canon \u2014 Yield is the flagship metric, not the complete product."
+    },
+    {
+      "id": "signalaf",
+      "canonical_name": "SignalAF",
+      "entity_type": "platform",
+      "aliases": [],
+      "canonical_urls": [
+        "https://signalaf.com"
+      ],
+      "primary_sources": [
+        "https://signalaf.com"
+      ],
+      "description": "Public-facing brand and distribution surface for AI operator measurement, benchmarking, education, and related products. SignalAF presents and distributes operator intelligence, SigRank (the public leaderboard), and Upsilon-related content. SignalAF is NOT the measurement engine (that is Upsilon), NOT the leaderboard (that is SigRank), and NOT the governance framework (that is MO\u00a7ES\u2122). Legal ownership remains with Ello Cello LLC.",
+      "product_boundaries": [
+        "SignalAF is the public brand/distribution surface, NOT the measurement engine.",
+        "SignalAF is NOT the legal owner or governance authority \u2014 that is Ello Cello LLC / MO\u00a7ES\u2122.",
+        "Do not classify SignalAF as replacing MO\u00a7ES, Upsilon, or SigRank."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "upsilon-architecture-directive-2026-08-28",
+        "sigrank-llms"
+      ],
+      "notes": "Separated from SigRank as a distinct first-class entity by owner directive 2026-08-28. Prior to this date, SignalAF and SigRank were conflated in the canon (SigRank's canonical_urls pointed to signalaf.com). SignalAF is the distribution surface; SigRank is the leaderboard that lives on it."
+    },
+    {
+      "id": "tteop",
+      "canonical_name": "TTEOP",
+      "entity_type": "architecture",
+      "aliases": [
+        "otep-spec",
+        "tteop-spec",
+        "Token Telemetry Evaluation Operator Protocol"
+      ],
+      "canonical_urls": [
+        "https://github.com/SunrisesIllNeverSee/otep-spec",
+        "https://www.npmjs.com/package/tteop-spec",
+        "https://doi.org/10.5281/zenodo.22180349"
+      ],
+      "primary_sources": [
+        "https://github.com/SunrisesIllNeverSee/otep-spec",
+        "https://www.npmjs.com/package/tteop-spec"
+      ],
+      "description": "Open, vendor-neutral interoperability protocol for measuring AI operator token efficiency. TTEOP defines four non-negative integer telemetry primitives (input I, output O, cache write W, cache read R), five derived metrics (Yield, Leverage, Velocity, output_fraction, log_leverage), a telemetry envelope schema, privacy modes, provenance levels, conformance tests, and a governance process. TTEOP is the SOLE interoperability protocol authority for the token telemetry / AI operator measurement layer. Products (SignalAF, SigRank, Upsilon) implement TTEOP through version-pinned implementation profiles and may not redefine TTEOP semantics. The legacy predecessor sigrank-standard (sigrank/0.1-draft) is retained only for backward compatibility and migration evidence. Current protocol version: tteop/0.1-draft. GitHub repository name is otep-spec (historical, kept for URL stability); npm package is tteop-spec; protocol name is TTEOP. The MCP transport is tteop-mcp (transport class, does not define protocol semantics).",
+      "product_boundaries": [
+        "TTEOP is the SOLE interoperability protocol authority for telemetry schemas, formulas, null semantics, privacy, provenance, and conformance.",
+        "Products implement TTEOP through version-pinned implementation profiles and may NOT redefine TTEOP I/O/W/R meaning, formulas, null semantics, privacy, or conformance.",
+        "sigrank-standard is a LEGACY PREDECESSOR, not a second active standard. Legacy alias sigrank/0.1-draft resolves to current TTEOP semantics.",
+        "tteop-mcp is a TRANSPORT. A transport bug may produce incorrect behavior but does not gain authority to redefine the protocol.",
+        "GitHub repo otep-spec, npm package tteop-spec, and protocol name TTEOP are ONE protocol authority. Do not treat them as separate standards."
+      ],
+      "status": "owner_approved",
+      "source_refs": [
+        "tteop-spec-readme",
+        "tteop-authority-architecture-directive-2026-09-02"
+      ],
+      "notes": "Added to Search Authority by owner directive 2026-09-02 (TTEOP / SignalAF operationalization + authority architecture baseline). Records TTEOP as the sole protocol authority for the token telemetry measurement layer. Search Authority does not copy the complete TTEOP specification; it records TTEOP's authority and ecosystem meaning. The protocol specification itself lives in the otep-spec repository. Version DOI 10.5281/zenodo.22180349 (v0.1.5-draft); concept DOI 10.5281/zenodo.22180348. Legacy version alias sigrank/0.1-draft is accepted for backward compatibility and resolves to current TTEOP semantics, not to a second active standard."
+    }
+  ]
+}
