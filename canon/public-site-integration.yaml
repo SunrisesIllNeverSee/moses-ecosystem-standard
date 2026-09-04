@@ -1,0 +1,91 @@
+# Public Site Integration — Epistemic Architecture
+#
+# How public sites connect to the epistemic architecture.
+#
+# Sites should expose:
+#   - canonical standard reference
+#   - canonical entity ID
+#   - ecosystem relationship
+#   - llms.txt pointer
+#   - structured data
+#   - machine-readable standard/version markers
+#
+# Do NOT replicate the entire corpus on every site.
+#
+# Schema version: 1
+# Created: 2026-09-04
+# Phase: 12
+
+schema_version: 1
+
+# ---------------------------------------------------------------------------
+# Site registry
+# ---------------------------------------------------------------------------
+
+sites:
+
+  mos2es_com:
+    domain: mos2es.com
+    repo: _1_moses/1_mos2es-site
+    has_llms_txt: true
+    has_llms_full_txt: true
+    has_sitemap: true
+    has_structured_data: true
+    canonical_entity_id: moses
+    ecosystem_standard_ref: https://github.com/SunrisesIllneverSee/moses-ecosystem-standard
+    machine_corpus_ref: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard/tree/main/machine
+    authority_source: search-authority
+    integration_status: existing
+    notes: >-
+      Already has llms.txt, llms-full.txt, sitemap.xml, structured data.
+      Add canonical entity ID meta tags and ecosystem standard reference.
+
+  signalaf_com:
+    domain: signalaf.com
+    repo: active/SigRank-repos/_01_sigrank-app
+    has_llms_txt: true
+    has_llms_full_txt: true
+    has_sitemap: true
+    has_structured_data: true
+    canonical_entity_id: sigrank
+    ecosystem_standard_ref: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
+    machine_corpus_ref: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard/tree/main/machine
+    authority_source: search-authority
+    integration_status: existing
+    notes: >-
+      Already has dynamic llms.txt route, llms-full.txt, sitemap.
+      Add canonical entity ID meta tags and ecosystem standard reference.
+
+  mos2es_org:
+    domain: mos2es.org
+    repo: null
+    has_llms_txt: unknown
+    canonical_entity_id: moses
+    ecosystem_standard_ref: https://github.com/SunrisesIllNeverSee/moses-ecosystem-standard
+    integration_status: not_started
+    notes: >-
+      Redirect or mirror of mos2es.com. Check current state.
+
+# ---------------------------------------------------------------------------
+# Integration checklist (per site)
+# ---------------------------------------------------------------------------
+# 1. llms.txt — navigation index pointing to ecosystem standard
+# 2. llms-full.txt — curated corpus (do not dump every repo README)
+# 3. Canonical entity ID — meta tag or JSON-LD referencing SA entity
+# 4. Ecosystem relationship — link to related entities
+# 5. Machine-readable standard/version markers
+# 6. Structured data (JSON-LD) with authority_source
+#
+# What NOT to do:
+#   - Do not replicate the entire corpus on every site
+#   - Do not expose disputed/private claims in public AI corpus
+#   - Do not present Framework claims as owner-approved without SA approval
+#   - Do not auto-promote any projection to canonical authority
+
+# ---------------------------------------------------------------------------
+# Canonical entity ID meta tag format
+# ---------------------------------------------------------------------------
+# <meta name="ello-canonical-entity" content="moses">
+# <meta name="ello-authority-source" content="search-authority">
+# <meta name="ello-ecosystem-standard" content="moses-ecosystem/0.1-draft">
+# <meta name="ello-framework-profile" content="full-moses">
